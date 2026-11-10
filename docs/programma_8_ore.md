@@ -57,8 +57,8 @@ Alla fine del corso i partecipanti dovrebbero essere in grado di:
 Prima del corso:
 
 ```bash
-git clone https://github.com/EBosi/phd-microbiome-2026.git
-cd phd-microbiome-2026
+git clone https://github.com/LDoni/Microbiologia_Molecolare_2026_2027.git
+cd Microbiologia_Molecolare_2026_2027
 mamba env create -f env/metabarcoding-phd.yml
 conda activate metabarcoding-phd
 Rscript env/post-create.R

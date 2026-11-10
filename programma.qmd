@@ -34,7 +34,7 @@ Lo scopo non e produrre una figura finale il piu rapidamente possibile, ma capir
 
 ## Preparazione degli studenti
 
-1. Completare l'[installazione](https://github.com/EBosi/phd-microbiome-2026#readme).
+1. Completare l'[installazione](https://github.com/LDoni/Microbiologia_Molecolare_2026_2027#readme).
 2. Verificare che RStudio si apra dall'ambiente del corso.
 3. Scaricare [Sea4Blue.zip](downloads/Sea4Blue.zip) senza decomprimerlo due volte.
 4. Portare un computer con almeno 8 GB di RAM e spazio libero sufficiente.
@@ -72,7 +72,7 @@ The goal is not to produce a final figure as fast as possible, but to understand
 
 ## Student preparation
 
-1. Complete the [installation](https://github.com/EBosi/phd-microbiome-2026#readme).
+1. Complete the [installation](https://github.com/LDoni/Microbiologia_Molecolare_2026_2027#readme).
 2. Make sure RStudio opens from the course environment.
 3. Download [Sea4Blue.zip](downloads/Sea4Blue.zip) without unzipping it twice.
 4. Bring a computer with at least 8 GB of RAM and enough free disk space.

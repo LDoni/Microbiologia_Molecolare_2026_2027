@@ -1,0 +1,94 @@
+---
+title: "LAB 02 — The Atlantic Microbiome: R and Statistical Analysis"
+toc: true
+---
+
+::: {.lang-block .lang-it}
+::: {.hero}
+# LAB 02 — Il microbioma dell'Atlantico
+
+R e analisi statistica dei dati SEA4BLUE.
+:::
+
+**Durata: 150 minuti.** Domanda iniziale: le comunità batteriche cambiano lungo il transetto atlantico, e quali limiti ha questa interpretazione?
+
+::: {.mode-card}
+**In aula:** eseguire i brevi comandi in RStudio con il progetto SEA4BLUE. **A casa:** scaricare lo stesso materiale e usare le figure e i risultati precomputati della guida; nessun ambiente remoto è richiesto.
+:::
+
+::: {.lab-progress aria-label="Avanzamento del laboratorio"}
+**Avanzamento:** <span data-lab-progress-label>0/2</span>
+<progress data-lab-progress value="0" max="100">0%</progress>
+:::
+
+::: {.lab-step data-lab-step="r"}
+## 1. R e RStudio
+
+Usare [Introduzione a R](intro-r.qmd) come riferimento per script, oggetti, data frame e grafici.
+
+<button class="btn btn-outline-primary btn-sm" type="button" data-complete-step aria-pressed="false">Segna come completato</button>
+:::
+
+::: {.mission-card}
+## Percorso guidato (150 minuti)
+
+1. **Esplora l'oggetto** (25 min): verificare campioni, metadati e dimensioni del `phyloseq`.
+2. **Composizione e diversità** (35 min): distinguere abbondanza relativa, ricchezza e profondità di sequenziamento.
+3. **Dissimilarità e PCoA** (45 min): interpretare Bray-Curtis senza attribuire automaticamente una causa ambientale.
+4. **PERMANOVA e limiti** (30 min): controllare dispersione e covariazione di longitudine, data e ambiente.
+5. **Sintesi** (15 min): formulare un pattern osservabile e una limitazione.
+:::
+
+::: {.lab-step data-lab-step="sea4blue"}
+## 2. Analizzare SEA4BLUE
+
+Scaricare il [materiale SEA4BLUE](downloads/Sea4Blue.zip) e seguire la pagina [Analisi biostatistica](biostatistica.qmd).
+
+<button class="btn btn-outline-primary btn-sm" type="button" data-complete-step aria-pressed="false">Segna come completato</button>
+:::
+:::
+
+::: {.lang-block .lang-en}
+::: {.hero}
+# LAB 02 — The Atlantic Microbiome
+
+R and statistical analysis of the SEA4BLUE data.
+:::
+
+**Duration: 150 minutes.** Opening question: do bacterial communities change along the Atlantic transect, and what limits that interpretation?
+
+::: {.mode-card}
+**In class:** run short commands in RStudio with the SEA4BLUE project. **At home:** download the same material and use the guided figures and precomputed results; no remote environment is required.
+:::
+
+::: {.lab-progress aria-label="Laboratory progress"}
+**Progress:** <span data-lab-progress-label>0/2</span>
+<progress data-lab-progress value="0" max="100">0%</progress>
+:::
+
+::: {.lab-step data-lab-step="r"}
+## 1. R and RStudio
+
+Use [Introduction to R](intro-r.qmd) as a reference for scripts, objects, data frames, and plots.
+
+<button class="btn btn-outline-primary btn-sm" type="button" data-complete-step aria-pressed="false">Mark complete</button>
+:::
+
+::: {.mission-card}
+## Guided route (150 minutes)
+
+1. **Inspect the object** (25 min): verify samples, metadata, and `phyloseq` dimensions.
+2. **Composition and diversity** (35 min): distinguish relative abundance, richness, and sequencing depth.
+3. **Dissimilarity and PCoA** (45 min): interpret Bray-Curtis without automatically assigning an environmental cause.
+4. **PERMANOVA and limits** (30 min): inspect dispersion and covariation among longitude, date, and environment.
+5. **Synthesis** (15 min): state one observable pattern and one limitation.
+:::
+
+::: {.lab-step data-lab-step="sea4blue"}
+## 2. Analyse SEA4BLUE
+
+Download the [SEA4BLUE material](downloads/Sea4Blue.zip) and follow the [Biostatistics](biostatistica.qmd) page.
+
+<button class="btn btn-outline-primary btn-sm" type="button" data-complete-step aria-pressed="false">Mark complete</button>
+:::
+:::

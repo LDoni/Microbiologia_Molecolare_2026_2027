@@ -1,12 +1,14 @@
-# Metabarcoding PhD Course 2026
+# Molecular Microbiology 2026/2027
 
 [Italiano](#italiano) | [English](#english)
 
-This repository contains the software environment and teaching material for the **Metabarcoding PhD Course 2026**. The course introduces basic use of the Linux command line, processing of amplicon-sequencing data with [AmpWrap](https://github.com/LDoni/AmpWrap), and downstream analysis in R/RStudio.
+This repository contains the software environment and teaching material for **Molecular Microbiology, University of Genoa, academic year 2026/2027**. The course introduces basic use of the Linux command line, processing of amplicon-sequencing data with [AmpWrap](https://github.com/LDoni/AmpWrap), and downstream analysis in R/RStudio.
 
-**Course website:** <https://ebosi.github.io/phd-microbiome-2026/>
+It is adapted from [EBosi/phd-microbiome-2026](https://github.com/EBosi/phd-microbiome-2026); its Git history and the original teaching materials are retained.
 
-**SEA4BLUE biostatistics material:** [download `Sea4Blue.zip`](https://ebosi.github.io/phd-microbiome-2026/downloads/Sea4Blue.zip)
+**Course website:** <https://ldoni.github.io/Microbiologia_Molecolare_2026_2027/>
+
+**SEA4BLUE biostatistics material:** [download `Sea4Blue.zip`](https://ldoni.github.io/Microbiologia_Molecolare_2026_2027/downloads/Sea4Blue.zip)
 
 The website is published from the `gh-pages` branch. If GitHub Pages is not yet enabled in the repository settings, set the source to `Deploy from a branch` and choose `gh-pages`.
 
@@ -51,7 +53,7 @@ La repository contiene soltanto istruzioni, script, materiale didattico e la ric
 ### Struttura principale della repository
 
 ```text
-phd-microbiome-2026/
+Microbiologia_Molecolare_2026_2027/
 ├── README.md
 ├── _quarto.yml
 ├── index.qmd
@@ -345,8 +347,8 @@ Se viene mostrato `conda: command not found`, chiudere completamente il terminal
 
 ```bash
 cd "$HOME"
-git clone https://github.com/EBosi/phd-microbiome-2026.git
-cd "$HOME/phd-microbiome-2026"
+git clone https://github.com/LDoni/Microbiologia_Molecolare_2026_2027.git
+cd "$HOME/Microbiologia_Molecolare_2026_2027"
 ```
 
 Controllare la posizione e i file:
@@ -359,7 +361,7 @@ ls
 L'output di `pwd` dovrebbe terminare con:
 
 ```text
-/phd-microbiome-2026
+/Microbiologia_Molecolare_2026_2027
 ```
 
 Dovrebbero essere visibili almeno `README.md`, `docs` ed `env`.
@@ -369,7 +371,7 @@ Dovrebbero essere visibili almeno `README.md`, `docs` ed `env`.
 Non eseguire nuovamente `git clone`. Usare:
 
 ```bash
-cd "$HOME/phd-microbiome-2026"
+cd "$HOME/Microbiologia_Molecolare_2026_2027"
 git pull --ff-only
 ```
 
@@ -378,7 +380,7 @@ git pull --ff-only
 Assicurarsi di essere nella repository:
 
 ```bash
-cd "$HOME/phd-microbiome-2026"
+cd "$HOME/Microbiologia_Molecolare_2026_2027"
 ```
 
 Creare l'ambiente:
@@ -419,7 +421,7 @@ I percorsi dovrebbero contenere `envs/metabarcoding-phd`.
 Aggiornarlo invece di ricrearlo:
 
 ```bash
-cd "$HOME/phd-microbiome-2026"
+cd "$HOME/Microbiologia_Molecolare_2026_2027"
 mamba env update -n metabarcoding-phd -f env/metabarcoding-phd.yml --prune
 conda activate metabarcoding-phd
 ```
@@ -429,7 +431,7 @@ conda activate metabarcoding-phd
 Alcuni pacchetti R vengono installati dopo la creazione dell'ambiente:
 
 ```bash
-cd "$HOME/phd-microbiome-2026"
+cd "$HOME/Microbiologia_Molecolare_2026_2027"
 conda activate metabarcoding-phd
 Rscript env/post-create.R
 ```
@@ -495,7 +497,7 @@ envs/metabarcoding-phd/bin/ampwrap
 Tornare nella repository del corso ed eseguire lo script automatico di controllo:
 
 ```bash
-cd "$HOME/phd-microbiome-2026"
+cd "$HOME/Microbiologia_Molecolare_2026_2027"
 conda activate metabarcoding-phd
 Rscript env/check_environment.R
 ```
@@ -707,14 +709,14 @@ Eseguire gli aggiornamenti solo quando richiesto dal docente o prima di un nuovo
 ### Aggiornare la repository del corso
 
 ```bash
-cd "$HOME/phd-microbiome-2026"
+cd "$HOME/Microbiologia_Molecolare_2026_2027"
 git pull --ff-only
 ```
 
 ### Aggiornare l'ambiente Conda
 
 ```bash
-cd "$HOME/phd-microbiome-2026"
+cd "$HOME/Microbiologia_Molecolare_2026_2027"
 mamba env update -n metabarcoding-phd -f env/metabarcoding-phd.yml --prune
 conda activate metabarcoding-phd
 Rscript env/post-create.R
@@ -736,7 +738,7 @@ ampwrap --help
 ### Ricontrollare tutto
 
 ```bash
-cd "$HOME/phd-microbiome-2026"
+cd "$HOME/Microbiologia_Molecolare_2026_2027"
 conda activate metabarcoding-phd
 Rscript env/check_environment.R
 ```
@@ -813,7 +815,7 @@ L'ambiente non è stato creato oppure la creazione non è terminata correttament
 
 ```bash
 conda env list
-cd "$HOME/phd-microbiome-2026"
+cd "$HOME/Microbiologia_Molecolare_2026_2027"
 mamba env create -f env/metabarcoding-phd.yml
 ```
 
@@ -829,7 +831,7 @@ Rimuovere un eventuale ambiente incompleto e ricrearlo:
 
 ```bash
 conda env remove -n metabarcoding-phd
-cd "$HOME/phd-microbiome-2026"
+cd "$HOME/Microbiologia_Molecolare_2026_2027"
 mamba env create -f env/metabarcoding-phd.yml
 ```
 
@@ -838,7 +840,7 @@ Usare la rimozione soltanto se l'ambiente è chiaramente incompleto o non funzio
 ### Un pacchetto R è mancante
 
 ```bash
-cd "$HOME/phd-microbiome-2026"
+cd "$HOME/Microbiologia_Molecolare_2026_2027"
 conda activate metabarcoding-phd
 Rscript env/post-create.R
 Rscript env/check_environment.R
@@ -859,7 +861,7 @@ which ampwrap
 Non clonare una seconda copia. Aggiornare quella esistente:
 
 ```bash
-cd "$HOME/phd-microbiome-2026"
+cd "$HOME/Microbiologia_Molecolare_2026_2027"
 git pull --ff-only
 ```
 
@@ -958,7 +960,7 @@ ls "/mnt/c/Users/Nome Utente/Desktop"
 Se il problema persiste, eseguire questi comandi dalla repository e inviare **tutto l'output**, insieme al comando che ha prodotto l'errore:
 
 ```bash
-cd "$HOME/phd-microbiome-2026"
+cd "$HOME/Microbiologia_Molecolare_2026_2027"
 
 printf '\n=== SISTEMA ===\n'
 cat /etc/os-release
@@ -988,7 +990,7 @@ Rscript env/check_environment.R
 Per salvare la diagnostica in un file:
 
 ```bash
-cd "$HOME/phd-microbiome-2026"
+cd "$HOME/Microbiologia_Molecolare_2026_2027"
 conda activate metabarcoding-phd
 Rscript env/check_environment.R 2>&1 | tee environment-check.log
 ```
@@ -996,7 +998,7 @@ Rscript env/check_environment.R 2>&1 | tee environment-check.log
 Il file sarà disponibile come:
 
 ```text
-~/phd-microbiome-2026/environment-check.log
+~/Microbiologia_Molecolare_2026_2027/environment-check.log
 ```
 
 ---
@@ -1037,7 +1039,7 @@ The repository contains only instructions, scripts, course material, and the env
 ### Main repository structure
 
 ```text
-phd-microbiome-2026/
+Microbiologia_Molecolare_2026_2027/
 ├── README.md
 ├── docs/
 │   └── programma_8_ore.md
@@ -1321,8 +1323,8 @@ If `conda: command not found` is displayed, completely close the Ubuntu terminal
 
 ```bash
 cd "$HOME"
-git clone https://github.com/EBosi/phd-microbiome-2026.git
-cd "$HOME/phd-microbiome-2026"
+git clone https://github.com/LDoni/Microbiologia_Molecolare_2026_2027.git
+cd "$HOME/Microbiologia_Molecolare_2026_2027"
 ```
 
 Check the location and files:
@@ -1335,7 +1337,7 @@ ls
 The output of `pwd` should end with:
 
 ```text
-/phd-microbiome-2026
+/Microbiologia_Molecolare_2026_2027
 ```
 
 At least `README.md`, `docs`, and `env` should be visible.
@@ -1345,7 +1347,7 @@ At least `README.md`, `docs`, and `env` should be visible.
 Do not run `git clone` again. Use:
 
 ```bash
-cd "$HOME/phd-microbiome-2026"
+cd "$HOME/Microbiologia_Molecolare_2026_2027"
 git pull --ff-only
 ```
 
@@ -1354,7 +1356,7 @@ git pull --ff-only
 Make sure that you are inside the repository:
 
 ```bash
-cd "$HOME/phd-microbiome-2026"
+cd "$HOME/Microbiologia_Molecolare_2026_2027"
 ```
 
 Create the environment:
@@ -1395,7 +1397,7 @@ The paths should contain `envs/metabarcoding-phd`.
 Update it rather than creating it again:
 
 ```bash
-cd "$HOME/phd-microbiome-2026"
+cd "$HOME/Microbiologia_Molecolare_2026_2027"
 mamba env update -n metabarcoding-phd -f env/metabarcoding-phd.yml --prune
 conda activate metabarcoding-phd
 ```
@@ -1405,7 +1407,7 @@ conda activate metabarcoding-phd
 Some R packages are installed after the Conda environment has been created:
 
 ```bash
-cd "$HOME/phd-microbiome-2026"
+cd "$HOME/Microbiologia_Molecolare_2026_2027"
 conda activate metabarcoding-phd
 Rscript env/post-create.R
 ```
@@ -1471,7 +1473,7 @@ envs/metabarcoding-phd/bin/ampwrap
 Return to the course repository and run the automatic check:
 
 ```bash
-cd "$HOME/phd-microbiome-2026"
+cd "$HOME/Microbiologia_Molecolare_2026_2027"
 conda activate metabarcoding-phd
 Rscript env/check_environment.R
 ```
@@ -1683,14 +1685,14 @@ Update only when requested by the instructor or before a new course/exercise.
 ### Update the course repository
 
 ```bash
-cd "$HOME/phd-microbiome-2026"
+cd "$HOME/Microbiologia_Molecolare_2026_2027"
 git pull --ff-only
 ```
 
 ### Update the Conda environment
 
 ```bash
-cd "$HOME/phd-microbiome-2026"
+cd "$HOME/Microbiologia_Molecolare_2026_2027"
 mamba env update -n metabarcoding-phd -f env/metabarcoding-phd.yml --prune
 conda activate metabarcoding-phd
 Rscript env/post-create.R
@@ -1712,7 +1714,7 @@ ampwrap --help
 ### Check everything again
 
 ```bash
-cd "$HOME/phd-microbiome-2026"
+cd "$HOME/Microbiologia_Molecolare_2026_2027"
 conda activate metabarcoding-phd
 Rscript env/check_environment.R
 ```
@@ -1789,7 +1791,7 @@ The environment was not created, or creation did not finish correctly:
 
 ```bash
 conda env list
-cd "$HOME/phd-microbiome-2026"
+cd "$HOME/Microbiologia_Molecolare_2026_2027"
 mamba env create -f env/metabarcoding-phd.yml
 ```
 
@@ -1805,7 +1807,7 @@ Remove an incomplete environment and create it again:
 
 ```bash
 conda env remove -n metabarcoding-phd
-cd "$HOME/phd-microbiome-2026"
+cd "$HOME/Microbiologia_Molecolare_2026_2027"
 mamba env create -f env/metabarcoding-phd.yml
 ```
 
@@ -1814,7 +1816,7 @@ Only remove the environment when it is clearly incomplete or broken.
 ### An R package is missing
 
 ```bash
-cd "$HOME/phd-microbiome-2026"
+cd "$HOME/Microbiologia_Molecolare_2026_2027"
 conda activate metabarcoding-phd
 Rscript env/post-create.R
 Rscript env/check_environment.R
@@ -1835,7 +1837,7 @@ which ampwrap
 Do not clone another copy. Update the existing repository:
 
 ```bash
-cd "$HOME/phd-microbiome-2026"
+cd "$HOME/Microbiologia_Molecolare_2026_2027"
 git pull --ff-only
 ```
 
@@ -1934,7 +1936,7 @@ ls "/mnt/c/Users/User Name/Desktop"
 If a problem persists, run these commands from the repository and send **all output**, together with the command that produced the error:
 
 ```bash
-cd "$HOME/phd-microbiome-2026"
+cd "$HOME/Microbiologia_Molecolare_2026_2027"
 
 printf '\n=== SYSTEM ===\n'
 cat /etc/os-release
@@ -1964,7 +1966,7 @@ Rscript env/check_environment.R
 To save the diagnostic output to a file:
 
 ```bash
-cd "$HOME/phd-microbiome-2026"
+cd "$HOME/Microbiologia_Molecolare_2026_2027"
 conda activate metabarcoding-phd
 Rscript env/check_environment.R 2>&1 | tee environment-check.log
 ```
@@ -1972,7 +1974,7 @@ Rscript env/check_environment.R 2>&1 | tee environment-check.log
 The file will be available at:
 
 ```text
-~/phd-microbiome-2026/environment-check.log
+~/Microbiologia_Molecolare_2026_2027/environment-check.log
 ```
 
 ---

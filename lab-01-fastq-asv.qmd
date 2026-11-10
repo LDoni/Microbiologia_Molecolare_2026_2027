@@ -1,0 +1,132 @@
+---
+title: "LAB 01 — From FASTQ to ASVs: Linux and AmpWrap"
+toc: true
+---
+
+::: {.lang-block .lang-it}
+::: {.hero}
+# LAB 01 — Da FASTQ ad ASV
+
+Linux e AmpWrap per orientarsi nei file di sequenziamento e nel workflow di pretrattamento.
+:::
+
+**Durata: 150 minuti.** Domanda iniziale: le reads paired-end disponibili sono adatte a ricostruire comunità microbiche?
+
+::: {.mode-card}
+**In aula:** eseguire davvero i comandi essenziali nel terminale Linux. **A casa:** usare il terminale virtuale qui sotto per esercitare la logica dei percorsi; AmpWrap e i report di qualità sono mostrati come output precalcolati, non ricalcolati dal browser.
+:::
+
+::: {.lab-progress aria-label="Avanzamento del laboratorio"}
+**Avanzamento:** <span data-lab-progress-label>0/2</span>
+<progress data-lab-progress value="0" max="100">0%</progress>
+:::
+
+::: {.lab-step data-lab-step="terminal"}
+## 1. Preparare il terminale
+
+Usare la risorsa [Bash essenziale](bash.qmd) per terminale, percorsi, file compressi e ambiente Conda.
+
+<button class="btn btn-outline-primary btn-sm" type="button" data-complete-step aria-pressed="false">Segna come completato</button>
+:::
+
+::: {.virtual-terminal data-virtual-terminal=""}
+<span class="evidence-label simulated">SIMULAZIONE DIDATTICA</span>
+<pre data-terminal-output>Terminale virtuale: prova `pwd`, `ls`, `cd data`, `head sample_A_R1.fastq.gz`.
+</pre><input aria-label="Comando del terminale virtuale" autocomplete="off" placeholder="Digita un comando e premi Invio">
+:::
+
+::: {.mission-card data-quiz=""}
+### Controlla il ragionamento
+
+Quale osservazione supporta il corretto abbinamento delle reads Illumina?
+
+<label><input type="radio" name="lab01-pair-it" data-correct="true" data-feedback-it="Corretto: R1 e R2 sono i due mate dello stesso campione; le ASV vengono inferite dopo."> Ogni campione ha file R1 e R2 corrispondenti.</label><br>
+<label><input type="radio" name="lab01-pair-it" data-feedback-it="No: lo stesso numero di ASV non verifica l'abbinamento delle reads."> Tutti i campioni hanno lo stesso numero di ASV.</label>
+<p data-quiz-feedback aria-live="polite"></p><button class="btn btn-outline-primary btn-sm" data-check-answer type="button">Verifica risposta</button>
+:::
+
+::: {.lab-step data-lab-step="ampwrap"}
+## 2. Seguire il workflow AmpWrap
+
+Usare la pagina [AmpWrap](ampwrap.qmd) per il controllo di qualità, la rimozione dei primer, l'inferenza delle ASV e l'interpretazione degli output.
+
+<button class="btn btn-outline-primary btn-sm" type="button" data-complete-step aria-pressed="false">Segna come completato</button>
+:::
+
+::: {.mission-card}
+## Percorso guidato (150 minuti)
+
+1. **File e struttura FASTQ** (25 min): identificare coppie R1/R2 e verificare la struttura delle reads.
+2. **Qualità** (30 min): usare i report FastQC/MultiQC disponibili nella pagina [AmpWrap](ampwrap.qmd); la loro interpretazione è reale, l'esecuzione lunga è precalcolata.
+3. **Workflow** (50 min): esaminare il comando AmpWrap, primer, overlap e le fasi Cutadapt, FIGARO e DADA2.
+4. **Output e conclusione** (45 min): confrontare ritenzione delle reads, ASV e tassonomia senza attribuire differenze tecniche a fenomeni biologici.
+:::
+
+::: {.callout-note}
+Le istruzioni, i comandi e gli esempi scientifici rimangono nelle pagine di riferimento. Questa pagina è il punto di ingresso del laboratorio.
+:::
+:::
+
+::: {.lang-block .lang-en}
+::: {.hero}
+# LAB 01 — From FASTQ to ASVs
+
+Linux and AmpWrap for navigating sequencing files and the preprocessing workflow.
+:::
+
+**Duration: 150 minutes.** Opening question: are these paired-end reads suitable for reconstructing microbial communities?
+
+::: {.mode-card}
+**In class:** run essential commands in a real Linux terminal. **At home:** use the virtual terminal below to practise paths; AmpWrap and quality reports are shown as precomputed outputs, not recomputed by the browser.
+:::
+
+::: {.lab-progress aria-label="Laboratory progress"}
+**Progress:** <span data-lab-progress-label>0/2</span>
+<progress data-lab-progress value="0" max="100">0%</progress>
+:::
+
+::: {.lab-step data-lab-step="terminal"}
+## 1. Prepare the terminal
+
+Use the [Bash essentials](bash.qmd) resource for the terminal, paths, compressed files, and the Conda environment.
+
+<button class="btn btn-outline-primary btn-sm" type="button" data-complete-step aria-pressed="false">Mark complete</button>
+:::
+
+::: {.virtual-terminal data-virtual-terminal=""}
+<span class="evidence-label simulated">TEACHING SIMULATION</span>
+<pre data-terminal-output>Virtual terminal: try `pwd`, `ls`, `cd data`, `head sample_A_R1.fastq.gz`.
+</pre><input aria-label="Virtual-terminal command" autocomplete="off" placeholder="Type a command and press Enter">
+:::
+
+::: {.mission-card data-quiz=""}
+### Check your reasoning
+
+Which observation supports correct pairing of Illumina reads?
+
+<label><input type="radio" name="lab01-pair-en" data-correct="true" data-feedback-en="Correct: R1 and R2 are mates from the same sample; ASVs are inferred later."> Each sample has matching R1 and R2 files.</label><br>
+<label><input type="radio" name="lab01-pair-en" data-feedback-en="No: equal ASV counts do not verify read pairing."> Every sample has the same number of ASVs.</label>
+<p data-quiz-feedback aria-live="polite"></p><button class="btn btn-outline-primary btn-sm" data-check-answer type="button">Check answer</button>
+:::
+
+::: {.lab-step data-lab-step="ampwrap"}
+## 2. Follow the AmpWrap workflow
+
+Use the [AmpWrap](ampwrap.qmd) page for quality control, primer removal, ASV inference, and interpretation of outputs.
+
+<button class="btn btn-outline-primary btn-sm" type="button" data-complete-step aria-pressed="false">Mark complete</button>
+:::
+
+::: {.mission-card}
+## Guided route (150 minutes)
+
+1. **Files and FASTQ structure** (25 min): identify R1/R2 pairs and inspect read structure.
+2. **Quality** (30 min): use FastQC/MultiQC reports in [AmpWrap](ampwrap.qmd); their interpretation is real, while the long run is precomputed.
+3. **Workflow** (50 min): examine the AmpWrap command, primers, overlap, and Cutadapt, FIGARO, and DADA2 stages.
+4. **Output and conclusion** (45 min): compare read retention, ASVs, and taxonomy without mistaking technical effects for biological patterns.
+:::
+
+::: {.callout-note}
+Instructions, commands, and scientific examples remain in the reference pages. This page is the laboratory entry point.
+:::
+:::

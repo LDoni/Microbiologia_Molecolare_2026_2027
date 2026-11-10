@@ -1,0 +1,516 @@
+{
+  "schema_version": "0.1",
+  "exam_content": false,
+  "questions": [
+    {
+      "id": "lab01_m1_1",
+      "lab": "lab01",
+      "mission": "m1",
+      "type": "single_choice",
+      "data_dependent": false,
+      "question": {
+        "it": "Quale osservazione supporta il corretto abbinamento delle letture Illumina?",
+        "en": "Which observation supports correct pairing of Illumina reads?"
+      },
+      "options": [
+        {
+          "id": "0",
+          "it": "Per ogni campione sono presenti file R1 e R2 corrispondenti",
+          "en": "Each sample has matching R1 and R2 files"
+        },
+        {
+          "id": "1",
+          "it": "Tutti i campioni hanno lo stesso numero di ASV",
+          "en": "Every sample has the same number of ASVs"
+        },
+        {
+          "id": "2",
+          "it": "Tutti i file compressi hanno la stessa dimensione",
+          "en": "All files are the same compressed size"
+        }
+      ],
+      "correct_id": "0",
+      "feedback": {
+        "it": "L’abbinamento R1/R2 riguarda le reads paired-end dello stesso campione; le ASV si ottengono successivamente.",
+        "en": "R1/R2 pairing is about read mates and sample identity; ASVs are inferred later."
+      },
+      "author_note": "Formative question: validate scientific precision against actual selected output when integrating."
+    },
+    {
+      "id": "lab01_m2_2",
+      "lab": "lab01",
+      "mission": "m2",
+      "type": "single_choice",
+      "data_dependent": false,
+      "question": {
+        "it": "Quale informazione dovrebbe guidare il trimming?",
+        "en": "What should guide trimming decisions?"
+      },
+      "options": [
+        {
+          "id": "0",
+          "it": "Una soglia identica per tutti i dataset",
+          "en": "One universal cutoff for all datasets"
+        },
+        {
+          "id": "1",
+          "it": "Qualità delle reads, lunghezza dell’amplicone e overlap previsto tra le coppie",
+          "en": "Read quality, amplicon length and expected paired-end overlap"
+        },
+        {
+          "id": "2",
+          "it": "Il numero di taxa atteso nel campione",
+          "en": "The number of taxa expected in the sample"
+        }
+      ],
+      "correct_id": "1",
+      "feedback": {
+        "it": "Qualità e overlap sono entrambi importanti; un trimming eccessivo può impedire il merging.",
+        "en": "Quality and overlap are both relevant; overtrimming may prevent merging."
+      },
+      "author_note": "Formative question: validate scientific precision against actual selected output when integrating."
+    },
+    {
+      "id": "lab01_m4_3",
+      "lab": "lab01",
+      "mission": "m4",
+      "type": "single_choice",
+      "data_dependent": false,
+      "question": {
+        "it": "Un campione perde molte reads durante il merging. Qual è il passo successivo?",
+        "en": "A sample loses many reads during paired-end merging. What is a reasonable next step?"
+      },
+      "options": [
+        {
+          "id": "0",
+          "it": "Concludere che ha diversità alfa più bassa",
+          "en": "Conclude that its alpha diversity is lower"
+        },
+        {
+          "id": "1",
+          "it": "Esaminare qualità delle reads, trimming e statistiche di overlap",
+          "en": "Inspect read quality, trimming and overlap statistics"
+        },
+        {
+          "id": "2",
+          "it": "Sostituire il numero di ASV con la media degli altri campioni",
+          "en": "Replace its ASV count with the average of other samples"
+        }
+      ],
+      "correct_id": "1",
+      "feedback": {
+        "it": "La perdita di reads va diagnosticata prima di interpretare differenze ecologiche.",
+        "en": "Read loss is a processing issue that requires diagnostics before ecological interpretation."
+      },
+      "author_note": "Formative question: validate scientific precision against actual selected output when integrating."
+    },
+    {
+      "id": "lab02_m2_4",
+      "lab": "lab02",
+      "mission": "m2",
+      "type": "single_choice",
+      "data_dependent": false,
+      "question": {
+        "it": "Cosa mostra direttamente un grafico delle abbondanze relative?",
+        "en": "What does a relative-abundance bar plot directly show?"
+      },
+      "options": [
+        {
+          "id": "0",
+          "it": "Il numero assoluto di cellule batteriche",
+          "en": "The absolute number of bacterial cells"
+        },
+        {
+          "id": "1",
+          "it": "La proporzione delle sequenze assegnate in ciascun campione",
+          "en": "The proportion of assigned sequences in each sample"
+        },
+        {
+          "id": "2",
+          "it": "L’espressione genica per cellula",
+          "en": "Per-cell gene expression"
+        }
+      ],
+      "correct_id": "1",
+      "feedback": {
+        "it": "Le abbondanze relative amplicon sono proporzioni, influenzate anche da amplificazione ed effetti composizionali.",
+        "en": "Amplicon relative abundance is a proportion and may be affected by amplification and compositional effects."
+      },
+      "author_note": "Formative question: validate scientific precision against actual selected output when integrating."
+    },
+    {
+      "id": "lab02_m3_5",
+      "lab": "lab02",
+      "mission": "m3",
+      "type": "single_choice",
+      "data_dependent": false,
+      "question": {
+        "it": "I campioni formano gruppi separati in una PCoA Bray-Curtis. Cosa possiamo concludere?",
+        "en": "Samples form separated groups on a Bray-Curtis PCoA. What follows?"
+      },
+      "options": [
+        {
+          "id": "0",
+          "it": "La temperatura ha causato la separazione",
+          "en": "Temperature caused the separation"
+        },
+        {
+          "id": "1",
+          "it": "La composizione potrebbe differire, ma la PCoA da sola non identifica i fattori responsabili",
+          "en": "Sample composition may differ, but drivers are not identified by the ordination alone"
+        },
+        {
+          "id": "2",
+          "it": "La ricchezza di specie è necessariamente diversa",
+          "en": "Species richness necessarily differs"
+        }
+      ],
+      "correct_id": "1",
+      "feedback": {
+        "it": "L’ordinamento visualizza dissimilarità; per attribuirle all’ambiente servono altre analisi e un disegno appropriato.",
+        "en": "Ordination visualizes dissimilarities; environmental attribution needs further analysis and appropriate design."
+      },
+      "author_note": "Formative question: validate scientific precision against actual selected output when integrating."
+    },
+    {
+      "id": "lab02_m4_6",
+      "lab": "lab02",
+      "mission": "m4",
+      "type": "single_choice",
+      "data_dependent": false,
+      "question": {
+        "it": "Perché controllare la dispersione multivariata quando si interpreta PERMANOVA?",
+        "en": "Why inspect multivariate dispersion when interpreting PERMANOVA?"
+      },
+      "options": [
+        {
+          "id": "0",
+          "it": "Perché PERMANOVA verifica direttamente la diversità alfa",
+          "en": "Because PERMANOVA tests alpha diversity directly"
+        },
+        {
+          "id": "1",
+          "it": "Per valutare se differenze di dispersione complicano l’interpretazione dei gruppi",
+          "en": "To assess whether dispersion differences may complicate interpretation of group differences"
+        },
+        {
+          "id": "2",
+          "it": "Per identificare il taxon più abbondante",
+          "en": "To identify the taxon with the largest abundance"
+        }
+      ],
+      "correct_id": "1",
+      "feedback": {
+        "it": "Differenze nella dispersione multivariata possono complicare l’interpretazione della separazione rilevata da PERMANOVA.",
+        "en": "Different multivariate dispersion may contribute to an apparent PERMANOVA separation."
+      },
+      "author_note": "Formative question: validate scientific precision against actual selected output when integrating."
+    },
+    {
+      "id": "lab03_m1_7",
+      "lab": "lab03",
+      "mission": "m1",
+      "type": "single_choice",
+      "data_dependent": false,
+      "question": {
+        "it": "Che cosa riassume l’N50 di un assembly?",
+        "en": "What does an assembly N50 summarize?"
+      },
+      "options": [
+        {
+          "id": "0",
+          "it": "Una misura della distribuzione delle lunghezze dei contig, non una prova di corretto assemblaggio",
+          "en": "A measure of contig length distribution, not proof of correct assembly"
+        },
+        {
+          "id": "1",
+          "it": "La percentuale di reads assegnate a una specie",
+          "en": "The percentage of reads assigned to a bacterial species"
+        },
+        {
+          "id": "2",
+          "it": "Una misura diretta della contaminazione del genoma",
+          "en": "A direct measure of genome contamination"
+        }
+      ],
+      "correct_id": "0",
+      "feedback": {
+        "it": "N50 descrive la contiguità; correttezza, copertura e contaminazione richiedono controlli separati.",
+        "en": "N50 describes contiguity; evaluate correctness, coverage and contamination separately."
+      },
+      "author_note": "Formative question: validate scientific precision against actual selected output when integrating."
+    },
+    {
+      "id": "lab03_m2_8",
+      "lab": "lab03",
+      "mission": "m2",
+      "type": "single_choice",
+      "data_dependent": false,
+      "question": {
+        "it": "Un gene di resistenza è presente su un contig corto. Quale affermazione è giustificata?",
+        "en": "A resistance gene is found on a short contig. What is a justified statement?"
+      },
+      "options": [
+        {
+          "id": "0",
+          "it": "È sicuramente su un plasmide",
+          "en": "It is definitely located on a plasmid"
+        },
+        {
+          "id": "1",
+          "it": "Il contesto locale è noto, ma assegnarlo a un plasmide richiede altre evidenze",
+          "en": "Its local contig context is known, but plasmid assignment requires additional evidence"
+        },
+        {
+          "id": "2",
+          "it": "Deve essere cromosomico",
+          "en": "It must be chromosomal"
+        }
+      ],
+      "correct_id": "1",
+      "feedback": {
+        "it": "Un contig corto da solo non consente di stabilire l’origine plasmidica o cromosomica.",
+        "en": "A short contig alone does not establish plasmid or chromosomal origin."
+      },
+      "author_note": "Formative question: validate scientific precision against actual selected output when integrating."
+    },
+    {
+      "id": "lab03_m3_9",
+      "lab": "lab03",
+      "mission": "m3",
+      "type": "single_choice",
+      "data_dependent": false,
+      "question": {
+        "it": "Un genoma contiene un determinante AMR. Che cosa possiamo inferire senza antibiogramma?",
+        "en": "A genome contains an AMR determinant. What can be inferred without AST?"
+      },
+      "options": [
+        {
+          "id": "0",
+          "it": "L’isolato è necessariamente clinicamente resistente",
+          "en": "The isolate is necessarily clinically resistant"
+        },
+        {
+          "id": "1",
+          "it": "Esiste un determinante genetico associato alla resistenza da interpretare nel contesto",
+          "en": "There is a genetic determinant associated with resistance that requires contextual interpretation"
+        },
+        {
+          "id": "2",
+          "it": "Ogni antibiotico di quella classe sarà inefficace",
+          "en": "Every antibiotic in that class will fail"
+        }
+      ],
+      "correct_id": "1",
+      "feedback": {
+        "it": "Il fenotipo dipende anche da espressione, variante, farmaco, criteri interpretativi e altri meccanismi.",
+        "en": "Phenotype also depends on expression, variant, drug, testing standards and other mechanisms."
+      },
+      "author_note": "Formative question: validate scientific precision against actual selected output when integrating."
+    },
+    {
+      "id": "lab03_m4_10",
+      "lab": "lab03",
+      "mission": "m4",
+      "type": "single_choice",
+      "data_dependent": false,
+      "question": {
+        "it": "Isolati clinici e alimentari differiscono per pochissimi SNP. Quale interpretazione è ragionevole?",
+        "en": "Clinical and food isolates differ by very few SNPs. What is a reasonable interpretation?"
+      },
+      "options": [
+        {
+          "id": "0",
+          "it": "La fonte alimentare è dimostrata senza dubbio",
+          "en": "The food source is proven beyond doubt"
+        },
+        {
+          "id": "1",
+          "it": "Gli isolati sono strettamente correlati; servono epidemiologia e tracciabilità per valutare la fonte",
+          "en": "The isolates are closely related; epidemiology and traceability are needed to assess a source"
+        },
+        {
+          "id": "2",
+          "it": "Non possono condividere un antenato comune recente",
+          "en": "They cannot share a recent common ancestor"
+        }
+      ],
+      "correct_id": "1",
+      "feedback": {
+        "it": "La correlazione genomica supporta l’indagine, ma non dimostra direzione o veicolo della trasmissione.",
+        "en": "Genomic relatedness supports investigation but does not establish direction or vehicle of transmission."
+      },
+      "author_note": "Formative question: validate scientific precision against actual selected output when integrating."
+    },
+    {
+      "id": "lab04_m1_11",
+      "lab": "lab04",
+      "mission": "m1",
+      "type": "single_choice",
+      "data_dependent": false,
+      "question": {
+        "it": "Una coppia fago-ospite non compare nella tabella. Come va codificata?",
+        "en": "A phage-host pair is absent from the interaction table. How should it be encoded?"
+      },
+      "options": [
+        {
+          "id": "0",
+          "it": "Come test negativo",
+          "en": "As a negative assay"
+        },
+        {
+          "id": "1",
+          "it": "Come non testata o sconosciuta finché non si controlla la provenienza",
+          "en": "As not tested or unknown until provenance is checked"
+        },
+        {
+          "id": "2",
+          "it": "Come test positivo",
+          "en": "As a positive assay"
+        }
+      ],
+      "correct_id": "1",
+      "feedback": {
+        "it": "L’assenza di un’osservazione non può essere trasformata in un risultato biologico negativo.",
+        "en": "Absence of an observation must not be converted into a biological negative."
+      },
+      "author_note": "Formative question: validate scientific precision against actual selected output when integrating."
+    },
+    {
+      "id": "lab04_m2_12",
+      "lab": "lab04",
+      "mission": "m2",
+      "type": "single_choice",
+      "data_dependent": false,
+      "question": {
+        "it": "Un fago forma placche su più ceppi testati di un altro. Cosa è supportato?",
+        "en": "A phage forms plaques on more tested strains than another phage. What is supported?"
+      },
+      "options": [
+        {
+          "id": "0",
+          "it": "Ha un host range osservato più ampio nei saggi disponibili",
+          "en": "It has a broader observed plaquing host range in this dataset"
+        },
+        {
+          "id": "1",
+          "it": "È necessariamente sicuro ed efficace nei pazienti",
+          "en": "It is necessarily safe and effective in patients"
+        },
+        {
+          "id": "2",
+          "it": "Infetterà tutti i ceppi della specie batterica",
+          "en": "It will infect all strains of the bacterial species"
+        }
+      ],
+      "correct_id": "0",
+      "feedback": {
+        "it": "La conclusione riguarda il pannello testato; efficacia clinica e generalizzazione richiedono altri studi.",
+        "en": "The conclusion concerns the assayed host panel; clinical efficacy and generalizability require further studies."
+      },
+      "author_note": "Formative question: validate scientific precision against actual selected output when integrating."
+    },
+    {
+      "id": "lab04_m3_13",
+      "lab": "lab04",
+      "mission": "m3",
+      "type": "single_choice",
+      "data_dependent": false,
+      "question": {
+        "it": "Nel genoma fagico è annotata una possibile receptor-binding protein. Cosa possiamo concludere?",
+        "en": "An annotated phage genome contains a putative receptor-binding protein. What follows?"
+      },
+      "options": [
+        {
+          "id": "0",
+          "it": "Il suo host range esatto è ora dimostrato sperimentalmente",
+          "en": "Its exact host range is now experimentally proven"
+        },
+        {
+          "id": "1",
+          "it": "L’annotazione suggerisce una funzione da verificare sperimentalmente",
+          "en": "The annotation suggests a potential function, which needs experimental validation"
+        },
+        {
+          "id": "2",
+          "it": "Il fago è necessariamente strettamente litico",
+          "en": "The phage is necessarily strictly lytic"
+        }
+      ],
+      "correct_id": "1",
+      "feedback": {
+        "it": "La predizione funzionale non equivale a una prova diretta di infettività o di ciclo vitale.",
+        "en": "Functional prediction is not direct evidence of infectivity or lifestyle."
+      },
+      "author_note": "Formative question: validate scientific precision against actual selected output when integrating."
+    },
+    {
+      "id": "lab04_m4_14",
+      "lab": "lab04",
+      "mission": "m4",
+      "type": "single_choice",
+      "data_dependent": false,
+      "question": {
+        "it": "PA14 wild type evolve resistenza a DMS3vir mentre un mutante senza CRISPR funzionale può evolvere resistenza della superficie. Cosa illustra?",
+        "en": "PA14 WT evolves resistance to DMS3vir while a CRISPR-defective mutant can evolve surface-based resistance. What does this illustrate?"
+      },
+      "options": [
+        {
+          "id": "0",
+          "it": "Tutta la resistenza ai fagi dipende da CRISPR",
+          "en": "All phage resistance is CRISPR-dependent"
+        },
+        {
+          "id": "1",
+          "it": "Meccanismi differenti possono produrre fenotipi di resistenza",
+          "en": "Different bacterial defense mechanisms can yield resistant phenotypes"
+        },
+        {
+          "id": "2",
+          "it": "Il genoma del fago non influisce sugli esiti",
+          "en": "The phage genome has no effect on bacterial outcomes"
+        }
+      ],
+      "correct_id": "1",
+      "feedback": {
+        "it": "La resistenza associata a CRISPR e quella mediata dalla superficie sono vie distinte verso fenotipi simili.",
+        "en": "CRISPR-associated and surface-based resistance are distinct routes to a similar broad phenotype."
+      },
+      "author_note": "Formative question: validate scientific precision against actual selected output when integrating."
+    },
+    {
+      "id": "lab04_m4b_15",
+      "lab": "lab04",
+      "mission": "m4b",
+      "type": "single_choice",
+      "data_dependent": false,
+      "question": {
+        "it": "Perché fagi temperati e virulenti possono avere esiti diversi in una popolazione con CRISPR?",
+        "en": "Why can temperate and virulent phages behave differently in a CRISPR-positive population?"
+      },
+      "options": [
+        {
+          "id": "0",
+          "it": "La lisogenia può offrire una via aggiuntiva di persistenza ai fagi temperati",
+          "en": "Lysogeny can provide an additional route for temperate-phage persistence"
+        },
+        {
+          "id": "1",
+          "it": "I fagi temperati non incontrano mai difese batteriche",
+          "en": "Temperate phages never encounter bacterial defenses"
+        },
+        {
+          "id": "2",
+          "it": "I fagi virulenti si integrano sempre nel cromosoma",
+          "en": "Virulent phages always integrate into the host chromosome"
+        }
+      ],
+      "correct_id": "0",
+      "feedback": {
+        "it": "I diversi cicli vitali possono cambiare la persistenza dei fagi, senza implicare che tutti i temperati si comportino allo stesso modo.",
+        "en": "The distinct life histories can alter phage persistence; this does not mean all temperate phages behave alike."
+      },
+      "author_note": "Formative question: validate scientific precision against actual selected output when integrating."
+    }
+  ]
+}

@@ -9,12 +9,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const buttons = Array.from(document.querySelectorAll(".lang-toggle"));
   if (!buttons.length) return;
 
-  const stored = localStorage.getItem("sea4blue-lang");
+  const stored = localStorage.getItem("molecular-microbiology-lang");
 
   function setLang(lang) {
     root.classList.remove("lang-it", "lang-en");
     root.classList.add(`lang-${lang}`);
-    localStorage.setItem("sea4blue-lang", lang);
+    localStorage.setItem("molecular-microbiology-lang", lang);
     buttons.forEach((button) => {
       button.classList.toggle("is-active", button.dataset.lang === lang);
     });

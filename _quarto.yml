@@ -4,6 +4,10 @@ project:
   render:
     - index.qmd
     - programma.qmd
+    - lab-01-fastq-asv.qmd
+    - lab-02-atlantic-microbiome.qmd
+    - lab-03-interactive-investigation.qmd
+    - lab-04-virtual-experiment.qmd
     - bash.qmd
     - ampwrap.qmd
     - intro-r.qmd
@@ -12,36 +16,52 @@ project:
     - downloads/Sea4Blue.zip
 
 website:
-  title: "Metabarcoding PhD 2026"
-  site-url: "https://ebosi.github.io/phd-microbiome-2026/"
-  repo-url: "https://github.com/EBosi/phd-microbiome-2026"
+  title: "Molecular Microbiology 2026/2027"
+  site-url: "https://ldoni.github.io/Microbiologia_Molecolare_2026_2027/"
+  repo-url: "https://github.com/LDoni/Microbiologia_Molecolare_2026_2027"
   repo-actions: [source, issue]
   navbar:
     background: primary
     left:
       - text: "Home"
         href: index.qmd
-      - text: "Programma"
-        href: programma.qmd
-      - text: "Bash"
-        href: bash.qmd
-      - text: "AmpWrap"
-        href: ampwrap.qmd
-      - text: "Introduzione a R"
-        href: intro-r.qmd
-      - text: "Biostatistica"
-        href: biostatistica.qmd
+      - text: "Practical Labs"
+        menu:
+          - text: "LAB 01 — From FASTQ to ASVs"
+            href: lab-01-fastq-asv.qmd
+          - text: "LAB 02 — The Atlantic Microbiome"
+            href: lab-02-atlantic-microbiome.qmd
+          - text: "LAB 03 — Interactive Investigation"
+            href: lab-03-interactive-investigation.qmd
+          - text: "LAB 04 — Virtual Experimental Investigation"
+            href: lab-04-virtual-experiment.qmd
+      - text: "Resources"
+        menu:
+          - text: "Course overview"
+            href: programma.qmd
+          - text: "Bash"
+            href: bash.qmd
+          - text: "AmpWrap"
+            href: ampwrap.qmd
+          - text: "Introduction to R"
+            href: intro-r.qmd
+          - text: "Biostatistics"
+            href: biostatistica.qmd
+      - text: "Setup"
+        href: "https://github.com/LDoni/Microbiologia_Molecolare_2026_2027#readme"
   page-footer:
-    left: "Metabarcoding PhD Course 2026"
+    left: "Molecular Microbiology · University of Genoa · 2026/2027"
     right:
       - icon: github
-        href: "https://github.com/EBosi/phd-microbiome-2026"
+        href: "https://github.com/LDoni/Microbiologia_Molecolare_2026_2027"
 
 format:
   html:
     theme: cosmo
     css: styles.css
-    include-after-body: includes/lang-switch.html
+    include-after-body:
+      - includes/lang-switch.html
+      - includes/lab-components.html
     toc: true
     toc-location: left
     code-copy: true

@@ -63,8 +63,8 @@ conda install -n base -c conda-forge mamba
 
 ```bash
 cd "$HOME"
-git clone https://github.com/EBosi/phd-microbiome-2026.git
-cd phd-microbiome-2026
+git clone https://github.com/LDoni/Microbiologia_Molecolare_2026_2027.git
+cd Microbiologia_Molecolare_2026_2027
 ```
 
 Se la repository non e' ancora pubblica, usare l'URL fornito dal docente.
@@ -105,7 +105,7 @@ AmpWrap scarica o usa database esterni tramite la propria cache. I database non 
 Tornare nella cartella del corso:
 
 ```bash
-cd "$HOME/phd-microbiome-2026"
+cd "$HOME/Microbiologia_Molecolare_2026_2027"
 conda activate metabarcoding-phd
 Rscript env/check_environment.R
 ```

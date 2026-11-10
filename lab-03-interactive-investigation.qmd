@@ -1,0 +1,91 @@
+---
+title: "LAB 03 — The Outbreak Investigation"
+toc: true
+---
+
+::: {.lang-block .lang-it}
+::: {.hero}
+# LAB 03 — L'indagine sul focolaio
+
+**150 minuti · Genomica batterica, virulenza e AMR**
+
+Alcuni isolati di *Escherichia coli* provengono da campioni clinici e alimentari. I dati genomici possono indicare relazioni compatibili con un collegamento epidemiologico?
+:::
+
+::: {.evidence-card}
+<span class="evidence-label">DATI REALI — FONTE DA CONGELARE</span>
+Il caso è basato sull'esempio NCBI Pathogen Detection relativo alla farina (cluster `PDS000003441`). Accessi, versione del cluster, QC, assembly, virulenza, AMR e albero non sono ancora congelati localmente: questa è una struttura investigativa, non un risultato del focolaio.
+:::
+
+::: {.lab-progress}
+**Avanzamento:** <span data-lab-progress-label>0/4</span><progress data-lab-progress value="0" max="100">0%</progress>
+:::
+
+::: {.mission-card data-lab-step="qc"}
+## Missione 1 — Controllo qualità e assembly <span class="mission-meta">50 min</span>
+
+<span class="evidence-label precomputed">OUTPUT PRECALCOLATO — DA VALIDARE</span> In aula ispeziona directory e report; a casa il replay mostrerà gli stessi file. Un N50 descrive la distribuzione delle lunghezze dei contig: non prova da solo correttezza, copertura o assenza di contaminazione.
+
+<details class="lab-hint"><summary>Domanda guida</summary>Quali controlli separati servono per continuità, copertura e contaminazione?</details>
+<button class="btn btn-outline-primary btn-sm" data-complete-step type="button">Segna missione completata</button>
+:::
+
+::: {.mission-card data-lab-step="genome"}
+## Missione 2 — Esplora il genoma annotato <span class="mission-meta">35 min</span>
+
+<span class="evidence-label">DATI REALI — ACCESSIONI DA VALIDARE</span> Il futuro visualizzatore genomico userà un assembly e un GFF congelati. Esamina il contesto di un gene prima di assegnare una regione a plasmide, profago o altro elemento mobile: una singola annotazione non basta.
+<button class="btn btn-outline-primary btn-sm" data-complete-step type="button">Segna missione completata</button>
+:::
+
+::: {.mission-card data-lab-step="amr"}
+## Missione 3 — Virulenza e AMR <span class="mission-meta">30 min</span>
+
+<span class="evidence-label precomputed">OUTPUT PRECALCOLATO — DA VALIDARE</span> I risultati AMRFinderPlus e di virulenza saranno mostrati solo dopo l'esecuzione documentata su isolati selezionati. Un determinante genomico non sostituisce fenotipo, espressione o contesto clinico.
+<button class="btn btn-outline-primary btn-sm" data-complete-step type="button">Segna missione completata</button>
+:::
+
+::: {.mission-card data-lab-step="epi"}
+## Missione 4 — Relazioni genomiche ed epidemiologia <span class="mission-meta">35 min</span>
+
+<span class="evidence-label">DATI REALI — FONTE NCBI</span> Confronta albero SNP e metadati. La somiglianza genomica può motivare ulteriori indagini; non dimostra da sola direzione di trasmissione o origine della contaminazione.
+<label for="lab03-notes">Note di laboratorio — ipotesi, evidenze e limite</label><textarea id="lab03-notes" class="lab-notes" data-lab-notes="conclusion" placeholder="Salvato solo nel browser di questo dispositivo."></textarea>
+<div class="lab-actions"><button class="btn btn-outline-primary btn-sm" data-complete-step type="button">Segna missione completata</button><button class="btn btn-outline-secondary btn-sm" data-reset-lab type="button">Ricomincia</button></div>
+:::
+:::
+
+::: {.lang-block .lang-en}
+::: {.hero}
+# LAB 03 — The Outbreak Investigation
+
+**150 minutes · Bacterial genomics, virulence and AMR**
+
+*Escherichia coli* isolates were recovered from clinical and food-associated samples. Can genomic data identify relationships compatible with epidemiological linkage?
+:::
+::: {.evidence-card}
+<span class="evidence-label">REAL DATA — SOURCE TO BE FROZEN</span> This case is grounded in NCBI Pathogen Detection's flour example (`PDS000003441`). Accessions, cluster version, QC/assembly, virulence, AMR, and tree results are not yet frozen locally; this is an investigation structure, not an outbreak result.
+:::
+::: {.lab-progress}
+**Progress:** <span data-lab-progress-label>0/4</span><progress data-lab-progress value="0" max="100">0%</progress>
+:::
+::: {.mission-card data-lab-step="qc"}
+## Mission 1 — Quality control and assembly <span class="mission-meta">50 min</span>
+<span class="evidence-label precomputed">PRECOMPUTED OUTPUT — PENDING VALIDATION</span>Inspect directories and reports in class; at home the replay will show the same files. N50 describes contig-length distribution, not correctness, coverage, or contamination on its own.
+<details class="lab-hint"><summary>Guiding question</summary>Which separate checks address contiguity, coverage, and contamination?</details><button class="btn btn-outline-primary btn-sm" data-complete-step type="button">Mark mission complete</button>
+:::
+::: {.mission-card data-lab-step="genome"}
+## Mission 2 — Explore an annotated genome <span class="mission-meta">35 min</span>
+<span class="evidence-label">REAL DATA — ACCESSIONS PENDING VALIDATION</span>The future genome viewer will use a frozen assembly and GFF. Examine a gene's context before assigning a region to a plasmid, prophage, or another mobile element.
+<button class="btn btn-outline-primary btn-sm" data-complete-step type="button">Mark mission complete</button>
+:::
+::: {.mission-card data-lab-step="amr"}
+## Mission 3 — Virulence and AMR <span class="mission-meta">30 min</span>
+<span class="evidence-label precomputed">PRECOMPUTED OUTPUT — PENDING VALIDATION</span>AMRFinderPlus and virulence results will be shown only after a documented run on selected isolates. A genomic determinant does not replace phenotype, expression, or clinical context.
+<button class="btn btn-outline-primary btn-sm" data-complete-step type="button">Mark mission complete</button>
+:::
+::: {.mission-card data-lab-step="epi"}
+## Mission 4 — Genomic relationships and epidemiology <span class="mission-meta">35 min</span>
+<span class="evidence-label">REAL DATA — NCBI SOURCE</span>Compare an SNP tree with metadata. Genomic similarity can motivate investigation; it does not itself prove transmission direction or a contamination source.
+<label for="lab03-notes-en">Laboratory notes — hypothesis, evidence, limitation</label><textarea id="lab03-notes-en" class="lab-notes" data-lab-notes="conclusion" placeholder="Saved only in this browser on this device."></textarea>
+<div class="lab-actions"><button class="btn btn-outline-primary btn-sm" data-complete-step type="button">Mark mission complete</button><button class="btn btn-outline-secondary btn-sm" data-reset-lab type="button">Start over</button></div>
+:::
+:::
