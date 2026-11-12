@@ -1,0 +1,196 @@
+"Sample","Zone","genus_plot","relative_abundance"
+"sa1","ANW","Alteromonas",0.087079213420731
+"sa1","ANW","Candidatus Actinomarina",0.00428841239862238
+"sa1","ANW","Clade Ia",0.0154427285857127
+"sa1","ANW","Clade Ib",0.012709698922342
+"sa1","ANW","Coraliomargarita",0.000799911120986557
+"sa1","ANW","Halomonas",0.00453282968559049
+"sa1","ANW","Lentimonas",0.00186645928230197
+"sa1","ANW","Marinobacter",0.114298411287635
+"sa1","ANW","NS4 marine group",0.00348850127763582
+"sa1","ANW","NS5 marine group",0.00291078769025664
+"sa1","ANW","Other",0.68703477391401
+"sa1","ANW","Prochlorococcus MIT9313",0.0550161093211865
+"sa1","ANW","Synechococcus CC9902",0.0105321630929897
+"sa10","ANW","Alteromonas",0.129347004856989
+"sa10","ANW","Candidatus Actinomarina",0.0210469508904479
+"sa10","ANW","Clade Ia",0.265839179708581
+"sa10","ANW","Clade Ib",0.0598381003777658
+"sa10","ANW","Coraliomargarita",0.00749055585536967
+"sa10","ANW","Halomonas",0.00636805180787911
+"sa10","ANW","Lentimonas",0.00613059902860227
+"sa10","ANW","Marinobacter",0.0110091743119266
+"sa10","ANW","NS4 marine group",0.00977873718294657
+"sa10","ANW","NS5 marine group",0.0160172692930383
+"sa10","ANW","Other",0.379622234214787
+"sa10","ANW","Prochlorococcus MIT9313",0.0121316783594172
+"sa10","ANW","Synechococcus CC9902",0.0753804641122504
+"sa11","ANW","Alteromonas",0.0760605391073796
+"sa11","ANW","Candidatus Actinomarina",0.0110749005744587
+"sa11","ANW","Clade Ia",0.0875220945647371
+"sa11","ANW","Clade Ib",0.0591858152894388
+"sa11","ANW","Coraliomargarita",0.0197193990278392
+"sa11","ANW","Halomonas",0.00110472823685373
+"sa11","ANW","Lentimonas",0.0165985417587274
+"sa11","ANW","Marinobacter",0.00428082191780822
+"sa11","ANW","NS4 marine group",0.0233650022094565
+"sa11","ANW","NS5 marine group",0.0167366327883341
+"sa11","ANW","Other",0.466830534688467
+"sa11","ANW","Prochlorococcus MIT9313",0.1019664162616
+"sa11","ANW","Synechococcus CC9902",0.115554573574901
+"sa12","ANW","Alteromonas",0.0304631408635858
+"sa12","ANW","Candidatus Actinomarina",0.00821619981797957
+"sa12","ANW","Clade Ia",0.0795075336232177
+"sa12","ANW","Clade Ib",0.0380726059257761
+"sa12","ANW","Coraliomargarita",0.030336737789463
+"sa12","ANW","Halomonas",0.00111234705228031
+"sa12","ANW","Lentimonas",0.0299575285670948
+"sa12","ANW","Marinobacter",0.00103650520780665
+"sa12","ANW","NS4 marine group",0.0358984730508646
+"sa12","ANW","NS5 marine group",0.0146121953685914
+"sa12","ANW","Other",0.591136616442512
+"sa12","ANW","Prochlorococcus MIT9313",0.0327636768126201
+"sa12","ANW","Synechococcus CC9902",0.106886439478208
+"sa13","ANC","Alteromonas",0.00625558534405719
+"sa13","ANC","Candidatus Actinomarina",0.00463075798196442
+"sa13","ANC","Clade Ia",0.0699081972540418
+"sa13","ANC","Clade Ib",0.0202697213421074
+"sa13","ANC","Coraliomargarita",0.0109269640100739
+"sa13","ANC","Halomonas",0.0348322365748639
+"sa13","ANC","Lentimonas",0.00452920627183362
+"sa13","ANC","Marinobacter",0.000893655049151028
+"sa13","ANC","NS4 marine group",0.0273174100251848
+"sa13","ANC","NS5 marine group",0.0198838248436104
+"sa13","ANC","Other",0.516227963278902
+"sa13","ANC","Prochlorococcus MIT9313",0.16786497684621
+"sa13","ANC","Synechococcus CC9902",0.116459501178
+"sa14","ANC","Alteromonas",0.00232669886952783
+"sa14","ANC","Candidatus Actinomarina",0.00263018133077059
+"sa14","ANC","Clade Ia",0.167041804709036
+"sa14","ANC","Clade Ib",0.0404390379605979
+"sa14","ANC","Coraliomargarita",0.00804228522293316
+"sa14","ANC","Halomonas",0.0738979793126122
+"sa14","ANC","Lentimonas",0.00273134215118485
+"sa14","ANC","Marinobacter",0.000379353076553451
+"sa14","ANC","NS4 marine group",0.0108747881945323
+"sa14","ANC","NS5 marine group",0.00685364558306568
+"sa14","ANC","Other",0.410839381907387
+"sa14","ANC","Prochlorococcus MIT9313",0.187754482688855
+"sa14","ANC","Synechococcus CC9902",0.086189018992944
+"sa15","ANC","Alteromonas",0.00121930709720821
+"sa15","ANC","Candidatus Actinomarina",0.0050033636057854
+"sa15","ANC","Clade Ia",0.209258324924319
+"sa15","ANC","Clade Ib",0.0702993609149008
+"sa15","ANC","Coraliomargarita",0.00508745375042045
+"sa15","ANC","Halomonas",0.00433064244870501
+"sa15","ANC","Lentimonas",0.00142953245879583
+"sa15","ANC","Marinobacter",0
+"sa15","ANC","NS4 marine group",0.00571812983518332
+"sa15","ANC","NS5 marine group",0.0110998990918264
+"sa15","ANC","Other",0.565968718466196
+"sa15","ANC","Prochlorococcus MIT9313",0.0855617221661621
+"sa15","ANC","Synechococcus CC9902",0.0350235452404978
+"sa2","ANC","Alteromonas",0.0412944212825094
+"sa2","ANC","Candidatus Actinomarina",0.0115328388109806
+"sa2","ANC","Clade Ia",0.13949500965582
+"sa2","ANC","Clade Ib",0.0451206526251196
+"sa2","ANC","Coraliomargarita",0.000902413052502391
+"sa2","ANC","Halomonas",0.0852599852004259
+"sa2","ANC","Lentimonas",0.00469254787301243
+"sa2","ANC","Marinobacter",0.00025267565470067
+"sa2","ANC","NS4 marine group",0.00846463443247243
+"sa2","ANC","NS5 marine group",0.0078870900788709
+"sa2","ANC","Other",0.467287526846788
+"sa2","ANC","Prochlorococcus MIT9313",0.177883660909271
+"sa2","ANC","Synechococcus CC9902",0.00992654357752631
+"sa3","ANC","Alteromonas",0.00284498064129714
+"sa3","ANC","Candidatus Actinomarina",0.00810712528610238
+"sa3","ANC","Clade Ia",0.186100237438234
+"sa3","ANC","Clade Ib",0.0246422383366489
+"sa3","ANC","Coraliomargarita",0.0004919891334574
+"sa3","ANC","Halomonas",0.00139040407281439
+"sa3","ANC","Lentimonas",0.00774348114398169
+"sa3","ANC","Marinobacter",0
+"sa3","ANC","NS4 marine group",0.00761513615264498
+"sa3","ANC","NS5 marine group",0.0118933025305354
+"sa3","ANC","Other",0.465571456073927
+"sa3","ANC","Prochlorococcus MIT9313",0.201330509743524
+"sa3","ANC","Synechococcus CC9902",0.0822691394468331
+"sa4","ANE","Alteromonas",0.0401149562926596
+"sa4","ANE","Candidatus Actinomarina",0.00604717997844569
+"sa4","ANE","Clade Ia",0.108609747335648
+"sa4","ANE","Clade Ib",0.0149483095836826
+"sa4","ANE","Coraliomargarita",0.000159661517582725
+"sa4","ANE","Halomonas",0.00872151039795633
+"sa4","ANE","Lentimonas",0.00145691134794236
+"sa4","ANE","Marinobacter",0.000239492276374087
+"sa4","ANE","NS4 marine group",0.00748413363669022
+"sa4","ANE","NS5 marine group",0.0042310302159422
+"sa4","ANE","Other",0.483874186724145
+"sa4","ANE","Prochlorococcus MIT9313",0.299804414640961
+"sa4","ANE","Synechococcus CC9902",0.0243084660519698
+"sa5","ANE","Alteromonas",0.127219484027964
+"sa5","ANE","Candidatus Actinomarina",0.00385638572106164
+"sa5","ANE","Clade Ia",0.220680126208987
+"sa5","ANE","Clade Ib",0.0249943288445279
+"sa5","ANE","Coraliomargarita",0.000763028190798292
+"sa5","ANE","Halomonas",0.000433070054236869
+"sa5","ANE","Lentimonas",0.00352642758450022
+"sa5","ANE","Marinobacter",0
+"sa5","ANE","NS4 marine group",0.00536181971912314
+"sa5","ANE","NS5 marine group",0.00511435111670207
+"sa5","ANE","Other",0.389989895032068
+"sa5","ANE","Prochlorococcus MIT9313",0.198841022045328
+"sa5","ANE","Synechococcus CC9902",0.0192200614547029
+"sa6","ANE","Alteromonas",0.00523293157516908
+"sa6","ANE","Candidatus Actinomarina",0.0101635999546605
+"sa6","ANE","Clade Ia",0.169607435674614
+"sa6","ANE","Clade Ib",0.0194581932217478
+"sa6","ANE","Coraliomargarita",0.00294706615785695
+"sa6","ANE","Halomonas",0.00770771148977973
+"sa6","ANE","Lentimonas",0.0119582876789965
+"sa6","ANE","Marinobacter",0.000283371745947784
+"sa6","ANE","NS4 marine group",0.00861450107681263
+"sa6","ANE","NS5 marine group",0.00504401707787056
+"sa6","ANE","Other",0.424037480636264
+"sa6","ANE","Prochlorococcus MIT9313",0.318509842445309
+"sa6","ANE","Synechococcus CC9902",0.0164355612649715
+"sa7","ANE","Alteromonas",0.00771847200418629
+"sa7","ANE","Candidatus Actinomarina",0.0151566120953876
+"sa7","ANE","Clade Ia",0.0859497645211931
+"sa7","ANE","Clade Ib",0.0114936084323839
+"sa7","ANE","Coraliomargarita",0.000523286237571952
+"sa7","ANE","Halomonas",0.00358824848620767
+"sa7","ANE","Lentimonas",0.00588697017268446
+"sa7","ANE","Marinobacter",0.000261643118785976
+"sa7","ANE","NS4 marine group",0.00910144277491216
+"sa7","ANE","NS5 marine group",0.00831651341855423
+"sa7","ANE","Other",0.634820961351574
+"sa7","ANE","Prochlorococcus MIT9313",0.201035359198625
+"sa7","ANE","Synechococcus CC9902",0.0161471181879345
+"sa8","ANW","Alteromonas",0.00790440867974558
+"sa8","ANW","Candidatus Actinomarina",0.020407135784651
+"sa8","ANW","Clade Ia",0.113665732458422
+"sa8","ANW","Clade Ib",0.0512360078540621
+"sa8","ANW","Coraliomargarita",0.0122677765284374
+"sa8","ANW","Halomonas",0.000503465521002903
+"sa8","ANW","Lentimonas",0.0136774799872455
+"sa8","ANW","Marinobacter",0.00496752647389531
+"sa8","ANW","NS4 marine group",0.0280094651517949
+"sa8","ANW","NS5 marine group",0.0211455518821219
+"sa8","ANW","Other",0.545068555221777
+"sa8","ANW","Prochlorococcus MIT9313",0.112323157735748
+"sa8","ANW","Synechococcus CC9902",0.0688237367210969
+"sa9","ANW","Alteromonas",0.0271728182286188
+"sa9","ANW","Candidatus Actinomarina",0.012892539785572
+"sa9","ANW","Clade Ia",0.0797278241600824
+"sa9","ANW","Clade Ib",0.0640598070595609
+"sa9","ANW","Coraliomargarita",0.00275309443337735
+"sa9","ANW","Halomonas",0.000783400855026076
+"sa9","ANW","Lentimonas",0.00270832867023301
+"sa9","ANW","Marinobacter",0.00814736889227119
+"sa9","ANW","NS4 marine group",0.00407368444613559
+"sa9","ANW","NS5 marine group",0.00606576090605905
+"sa9","ANW","Other",0.272959240772657
+"sa9","ANW","Prochlorococcus MIT9313",0.473420328133044
+"sa9","ANW","Synechococcus CC9902",0.0452358036573628

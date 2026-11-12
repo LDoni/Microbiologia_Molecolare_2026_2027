@@ -1,0 +1,11 @@
+sample_id,category,sample_description,sampling_time
+P01,patient,Patient A,Day 4
+P02,patient,Patient B,Day 5
+F01,food,Refrigerated ready-to-eat salad ingredient (same batch),Day 5
+E01,environment,Food preparation bench,Day 5
+E02,environment,Restroom door handle,Day 5
+F02,food,Cold sauce from the same service,Day 5
+E03,environment,Kitchen sink drain,Day 5
+C01,reference,External comparison isolate 1,Archived
+C02,reference,External comparison isolate 2,Archived
+C03,reference,External comparison isolate 3,Archived

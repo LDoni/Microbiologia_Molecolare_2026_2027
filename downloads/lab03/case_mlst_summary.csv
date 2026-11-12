@@ -1,0 +1,11 @@
+sample_id,sequence_type,recA_allele
+P01,11,recA(2)
+P02,11,recA(2)
+F01,11,recA(2)
+E01,11,recA(2)
+E02,11,recA(2)
+F02,11,recA(2)
+E03,11,recA(2)
+C01,11,recA(2)
+C02,-,recA(~2)
+C03,11,recA(2)
