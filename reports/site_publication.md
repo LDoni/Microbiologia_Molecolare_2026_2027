@@ -21,3 +21,9 @@ Previous Git history is not rewritten.
 The existing main-branch publication workflow is reused without changing Pages
 settings. Quarto full render and Chromium four-laboratory regression tests are
 run before commit. No further scientific computations are started.
+
+The first remote build exposed an ignored HTML include and absent R on the
+runner. Includes are now explicitly tracked. The deployment workflow verifies
+and publishes the committed, locally rendered `_site` instead of recomputing
+course R examples on GitHub. Future source edits must be rendered locally before
+commit. Pages branch and repository settings are unchanged.

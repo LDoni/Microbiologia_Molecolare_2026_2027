@@ -22,10 +22,13 @@ jobs:
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
 
-      - name: Render website
-        uses: quarto-dev/quarto-actions/render@v2
-        with:
-          to: html
+      - name: Verify locally rendered teaching website
+        run: |
+          test -s _site/index.html
+          test -s _site/lab-investigation.js
+          for page in lab-01-fastq-asv lab-02-atlantic-microbiome lab-03-interactive-investigation lab-04-virtual-experiment; do
+            test -s "_site/$page.html"
+          done
 
       - name: Disable Jekyll processing
         run: touch _site/.nojekyll
