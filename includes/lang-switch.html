@@ -14,6 +14,15 @@ document.addEventListener("DOMContentLoaded", () => {
   function setLang(lang) {
     root.classList.remove("lang-it", "lang-en");
     root.classList.add(`lang-${lang}`);
+    root.lang = lang;
+    const translations = { 'Practical Labs': 'Laboratori', 'Resources': 'Risorse', 'Course overview': 'Programma', 'Introduction to R': 'Introduzione a R', 'Biostatistics': 'Biostatistica', 'LAB 03 — Interactive Investigation': 'LAB 03 — Indagine interattiva', 'LAB 04 — Virtual Experimental Investigation': 'LAB 04 — Esperimento virtuale' };
+    translations['LAB 01 — From FASTQ to ASVs'] = 'LAB 01 — Da FASTQ ad ASV';
+    translations['LAB 02 — The Atlantic Microbiome'] = 'LAB 02 — Il microbioma atlantico';
+    document.querySelectorAll('.navbar a .menu-text, .navbar .dropdown-text').forEach(node => {
+      if (!node.dataset.english) node.dataset.english = node.textContent.trim();
+      const original = node.dataset.english;
+      node.textContent = lang === 'it' ? (translations[original] || original) : original;
+    });
     localStorage.setItem("molecular-microbiology-lang", lang);
     buttons.forEach((button) => {
       button.classList.toggle("is-active", button.dataset.lang === lang);

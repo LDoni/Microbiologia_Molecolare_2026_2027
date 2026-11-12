@@ -1,0 +1,9 @@
+phage_id,archive_entry,archive_status,length_bp,gc_percent
+K1PH164C1,phages_genomes/K1PH164C1.fasta,present,44169,53.97
+K1lambda5,,no exact filename match,,
+K2PH164C1,phages_genomes/K2PH164C1.fasta,present,48749,50.23
+K2alfa62,phages_genomes/K2alfa62.fasta,present,49218,49.96
+K4PH164,,no exact filename match,,
+K5lamda5,,no exact filename match,,
+K6PH25C3,phages_genomes/K6PH25C3.fasta,present,50820,51.29
+K7PH164C4,phages_genomes/K7PH164C4.fasta,present,113079,45.47

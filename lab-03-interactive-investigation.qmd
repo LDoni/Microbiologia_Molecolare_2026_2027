@@ -1,91 +1,35 @@
 ---
-title: "LAB 03 — The Outbreak Investigation"
-toc: true
+title: "LAB 03"
+toc: false
+title-block-style: none
 ---
 
-::: {.lang-block .lang-it}
-::: {.hero}
-# LAB 03 — L'indagine sul focolaio
+# LAB 03 — <span class="lang-it">Indagine del focolaio</span><span class="lang-en">Outbreak investigation</span>
 
-**150 minuti · Genomica batterica, virulenza e AMR**
+<p><span class="lang-it">150 minuti · 100 punti formativi. Apri le missioni in ordine. Clicca le figure per ingrandirle.</span><span class="lang-en">150 minutes · 100 formative points. Open missions in order. Click figures to enlarge.</span></p>
 
-Alcuni isolati di *Escherichia coli* provengono da campioni clinici e alimentari. I dati genomici possono indicare relazioni compatibili con un collegamento epidemiologico?
-:::
+<div data-investigation="03"></div>
 
-::: {.evidence-card}
-<span class="evidence-label">DATI REALI — FONTE DA CONGELARE</span>
-Il caso è basato sull'esempio NCBI Pathogen Detection relativo alla farina (cluster `PDS000003441`). Accessi, versione del cluster, QC, assembly, virulenza, AMR e albero non sono ancora congelati localmente: questa è una struttura investigativa, non un risultato del focolaio.
-:::
+<template data-evidence="0"><p><span class="lang-it">Dopo un pasto nello stesso ristorante, due persone segnalano sintomi gastrointestinali. Sono disponibili isolati da pazienti, alimenti e superfici. Formula due ipotesi dal registro senza attribuire ancora una fonte.</span><span class="lang-en">After a meal at the same restaurant, two people report gastrointestinal symptoms. Patient, food and surface isolates are available. Form two hypotheses from the register without assigning a source yet.</span></p><a href="downloads/lab03/case_samples.csv" download><span class="lang-it">Registro campioni</span><span class="lang-en">Sample register</span></a></template>
 
-::: {.lab-progress}
-**Avanzamento:** <span data-lab-progress-label>0/4</span><progress data-lab-progress value="0" max="100">0%</progress>
-:::
+<template data-evidence="1"><p><span class="lang-it">Ispeziona la coppia FASTQ, attiva il replay ed esegui i comandi dalla root del progetto. Apri il report QC e localizza contigs.fasta.</span><span class="lang-en">Inspect the FASTQ pair, activate replay and run commands from the project root. Open the QC report and locate contigs.fasta.</span></p><pre><code>mkdir -p results
+ls ecoli_outbreak/classroom_data/reads/
+gzip -cd ecoli_outbreak/classroom_data/reads/CP008805_R1.fastq.gz | head
+source tools/classroom-replay/activate.sh
+command -v spades.py
+fastqc --help
+fastqc -o results/qc ecoli_outbreak/classroom_data/reads/CP008805_R1.fastq.gz ecoli_outbreak/classroom_data/reads/CP008805_R2.fastq.gz
+spades.py -1 ecoli_outbreak/classroom_data/reads/CP008805_R1.fastq.gz -2 ecoli_outbreak/classroom_data/reads/CP008805_R2.fastq.gz -o results/spades
+ls results/spades/</code></pre></template>
 
-::: {.mission-card data-lab-step="qc"}
-## Missione 1 — Controllo qualità e assembly <span class="mission-meta">50 min</span>
+<template data-evidence="2"><p><span class="lang-it">Obiettivo: distinguere continuità e correttezza. Confronta QUAST e MLST prima di passare agli SNP.</span><span class="lang-en">Objective: distinguish contiguity and correctness. Compare QUAST and MLST before examining SNPs.</span></p><pre><code>quast.py -o results/quast results/spades/contigs.fasta
+less results/quast/report.tsv</code></pre><a href="downloads/lab03/case_quast_summary.csv">QUAST CSV</a> · <a href="downloads/lab03/case_mlst_summary.csv">MLST CSV</a><a href="figures/lab03/case/case_genome_lengths.svg" target="_blank"><img alt="Genome lengths / Lunghezze genomiche" src="figures/lab03/case/case_genome_lengths.svg"></a></template>
 
-<span class="evidence-label precomputed">OUTPUT PRECALCOLATO — DA VALIDARE</span> In aula ispeziona directory e report; a casa il replay mostrerà gli stessi file. Un N50 descrive la distribuzione delle lunghezze dei contig: non prova da solo correttezza, copertura o assenza di contaminazione.
+<template data-evidence="3"><p><span class="lang-it">Obiettivo: confrontare distanze e supporti. Leggi la matrice e confronta i due alberi: IQ-TREE riporta bootstrap; Gubbins ha valori di ramo, con scala e filtraggio diversi.</span><span class="lang-en">Objective: compare distances and support. Read the matrix and compare both trees: IQ-TREE reports bootstrap support; Gubbins has branch values with different filtering and scale.</span></p><a href="downloads/lab03/case_snp_distances.csv">SNP CSV</a><a target="_blank" href="figures/lab03/case/case_distance_heatmap.svg"><img src="figures/lab03/case/case_distance_heatmap.svg" alt="SNP distances / Distanze SNP"></a><a target="_blank" href="figures/lab03/case/case_tree_comparison.svg"><img src="figures/lab03/case/case_tree_comparison.svg" alt="Original and filtered trees / Alberi originale e filtrato"></a></template>
 
-<details class="lab-hint"><summary>Domanda guida</summary>Quali controlli separati servono per continuità, copertura e contaminazione?</details>
-<button class="btn btn-outline-primary btn-sm" data-complete-step type="button">Segna missione completata</button>
-:::
+<template data-evidence="4"><p><span class="lang-it">Scrivi nel rapporto: ipotesi, due evidenze quantitative, un limite e un dato epidemiologico necessario. La conclusione scientifica è discussa col docente.</span><span class="lang-en">Write a hypothesis, two quantitative observations, one limitation and a needed epidemiological observation. Discuss your scientific conclusion with the instructor.</span></p></template>
 
-::: {.mission-card data-lab-step="genome"}
-## Missione 2 — Esplora il genoma annotato <span class="mission-meta">35 min</span>
+<details><summary><span class="lang-it">Metodi e provenienza</span><span class="lang-en">Methods and provenance</span></summary><p><span class="lang-it">Le FASTQ sono fixture sintetiche indipendenti dagli assembly. Il replay consegna risultati preparati; il report QC è illustrativo e QUAST contiene il confronto completo già validato. I dati del caso sono didattici: gli alias delle figure identificano i campioni del registro.</span><span class="lang-en">FASTQ files are synthetic fixtures independent of the assemblies. Replay delivers prepared results; QC is illustrative and QUAST contains the full validated comparison. Case metadata are educational; figure aliases identify samples in the register.</span></p></details>
 
-<span class="evidence-label">DATI REALI — ACCESSIONI DA VALIDARE</span> Il futuro visualizzatore genomico userà un assembly e un GFF congelati. Esamina il contesto di un gene prima di assegnare una regione a plasmide, profago o altro elemento mobile: una singola annotazione non basta.
-<button class="btn btn-outline-primary btn-sm" data-complete-step type="button">Segna missione completata</button>
-:::
+<script src="lab-investigation.js"></script>
 
-::: {.mission-card data-lab-step="amr"}
-## Missione 3 — Virulenza e AMR <span class="mission-meta">30 min</span>
-
-<span class="evidence-label precomputed">OUTPUT PRECALCOLATO — DA VALIDARE</span> I risultati AMRFinderPlus e di virulenza saranno mostrati solo dopo l'esecuzione documentata su isolati selezionati. Un determinante genomico non sostituisce fenotipo, espressione o contesto clinico.
-<button class="btn btn-outline-primary btn-sm" data-complete-step type="button">Segna missione completata</button>
-:::
-
-::: {.mission-card data-lab-step="epi"}
-## Missione 4 — Relazioni genomiche ed epidemiologia <span class="mission-meta">35 min</span>
-
-<span class="evidence-label">DATI REALI — FONTE NCBI</span> Confronta albero SNP e metadati. La somiglianza genomica può motivare ulteriori indagini; non dimostra da sola direzione di trasmissione o origine della contaminazione.
-<label for="lab03-notes">Note di laboratorio — ipotesi, evidenze e limite</label><textarea id="lab03-notes" class="lab-notes" data-lab-notes="conclusion" placeholder="Salvato solo nel browser di questo dispositivo."></textarea>
-<div class="lab-actions"><button class="btn btn-outline-primary btn-sm" data-complete-step type="button">Segna missione completata</button><button class="btn btn-outline-secondary btn-sm" data-reset-lab type="button">Ricomincia</button></div>
-:::
-:::
-
-::: {.lang-block .lang-en}
-::: {.hero}
-# LAB 03 — The Outbreak Investigation
-
-**150 minutes · Bacterial genomics, virulence and AMR**
-
-*Escherichia coli* isolates were recovered from clinical and food-associated samples. Can genomic data identify relationships compatible with epidemiological linkage?
-:::
-::: {.evidence-card}
-<span class="evidence-label">REAL DATA — SOURCE TO BE FROZEN</span> This case is grounded in NCBI Pathogen Detection's flour example (`PDS000003441`). Accessions, cluster version, QC/assembly, virulence, AMR, and tree results are not yet frozen locally; this is an investigation structure, not an outbreak result.
-:::
-::: {.lab-progress}
-**Progress:** <span data-lab-progress-label>0/4</span><progress data-lab-progress value="0" max="100">0%</progress>
-:::
-::: {.mission-card data-lab-step="qc"}
-## Mission 1 — Quality control and assembly <span class="mission-meta">50 min</span>
-<span class="evidence-label precomputed">PRECOMPUTED OUTPUT — PENDING VALIDATION</span>Inspect directories and reports in class; at home the replay will show the same files. N50 describes contig-length distribution, not correctness, coverage, or contamination on its own.
-<details class="lab-hint"><summary>Guiding question</summary>Which separate checks address contiguity, coverage, and contamination?</details><button class="btn btn-outline-primary btn-sm" data-complete-step type="button">Mark mission complete</button>
-:::
-::: {.mission-card data-lab-step="genome"}
-## Mission 2 — Explore an annotated genome <span class="mission-meta">35 min</span>
-<span class="evidence-label">REAL DATA — ACCESSIONS PENDING VALIDATION</span>The future genome viewer will use a frozen assembly and GFF. Examine a gene's context before assigning a region to a plasmid, prophage, or another mobile element.
-<button class="btn btn-outline-primary btn-sm" data-complete-step type="button">Mark mission complete</button>
-:::
-::: {.mission-card data-lab-step="amr"}
-## Mission 3 — Virulence and AMR <span class="mission-meta">30 min</span>
-<span class="evidence-label precomputed">PRECOMPUTED OUTPUT — PENDING VALIDATION</span>AMRFinderPlus and virulence results will be shown only after a documented run on selected isolates. A genomic determinant does not replace phenotype, expression, or clinical context.
-<button class="btn btn-outline-primary btn-sm" data-complete-step type="button">Mark mission complete</button>
-:::
-::: {.mission-card data-lab-step="epi"}
-## Mission 4 — Genomic relationships and epidemiology <span class="mission-meta">35 min</span>
-<span class="evidence-label">REAL DATA — NCBI SOURCE</span>Compare an SNP tree with metadata. Genomic similarity can motivate investigation; it does not itself prove transmission direction or a contamination source.
-<label for="lab03-notes-en">Laboratory notes — hypothesis, evidence, limitation</label><textarea id="lab03-notes-en" class="lab-notes" data-lab-notes="conclusion" placeholder="Saved only in this browser on this device."></textarea>
-<div class="lab-actions"><button class="btn btn-outline-primary btn-sm" data-complete-step type="button">Mark mission complete</button><button class="btn btn-outline-secondary btn-sm" data-reset-lab type="button">Start over</button></div>
-:::
-:::

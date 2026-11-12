@@ -1,0 +1,9 @@
+"metric","value"
+"original_samples",17
+"original_taxa",1312
+"ecological_samples_after_filter",15
+"taxa_after_filter",1219
+"PERMANOVA_R2",0.487205308355249
+"PERMANOVA_p",0.001
+"dispersion_ANOVA_p",0.108738181248578
+"dispersion_permutation_p",0.09

@@ -200,3 +200,12 @@ figure img {
     bottom: 1rem;
   }
 }
+/* Investigation controls: responsive, keyboard accessible, bilingual. */
+[data-investigation] label { display: inline-block; margin: .4rem 0; }
+[data-investigation] textarea { display:block; width:100%; min-height:9rem; }
+[data-investigation] button { margin:.5rem .3rem .5rem 0; padding:.5rem .8rem; border:1px solid #27677b; border-radius:.3rem; background:#eff8fa; color:#153c4b; }
+[data-investigation] img { width:100%; height:auto; }
+[data-investigation] pre { overflow:auto; padding:1rem; background:#f4f5f6; }
+[data-investigation] fieldset { margin:1rem 0; padding:1rem; border:1px solid #bccbd0; }
+[data-investigation] legend { font-size:1.1rem; }
+[hidden] { display:none !important; }

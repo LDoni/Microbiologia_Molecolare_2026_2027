@@ -1,132 +1,43 @@
 ---
-title: "LAB 01 — From FASTQ to ASVs: Linux and AmpWrap"
-toc: true
+title: "LAB 01"
+toc: false
+title-block-style: none
 ---
 
-::: {.lang-block .lang-it}
-::: {.hero}
-# LAB 01 — Da FASTQ ad ASV
+# LAB 01 — <span class="lang-it">Da FASTQ ad ASV</span><span class="lang-en">From FASTQ to ASVs</span>
 
-Linux e AmpWrap per orientarsi nei file di sequenziamento e nel workflow di pretrattamento.
-:::
+<p><span class="lang-it">150 minuti · 100 punti formativi. Apri le missioni in ordine; clicca le figure per ingrandirle.</span><span class="lang-en">150 minutes · 100 formative points. Open missions in order; click figures to enlarge.</span></p>
 
-**Durata: 150 minuti.** Domanda iniziale: le reads paired-end disponibili sono adatte a ricostruire comunità microbiche?
+<div data-investigation="01"></div>
 
-::: {.mode-card}
-**In aula:** eseguire davvero i comandi essenziali nel terminale Linux. **A casa:** usare il terminale virtuale qui sotto per esercitare la logica dei percorsi; AmpWrap e i report di qualità sono mostrati come output precalcolati, non ricalcolati dal browser.
-:::
+<template data-evidence="0"><p><span class="lang-it">Obiettivo: orientarsi nel terminale. Dalla root del progetto usa pwd, ls e file; crea una directory di lavoro. Consulta Bash per pipe e percorsi.</span><span class="lang-en">Objective: navigate the terminal. From the project root use pwd, ls and file; create a working directory. Consult Bash for pipes and paths.</span></p><pre><code>pwd
+ls -lh
+mkdir -p results/lab01
+ls data-curation/lab01/
+cat data-curation/lab01/fastq_inventory.csv</code></pre><a href="bash.html">Bash</a></template>
 
-::: {.lab-progress aria-label="Avanzamento del laboratorio"}
-**Avanzamento:** <span data-lab-progress-label>0/2</span>
-<progress data-lab-progress value="0" max="100">0%</progress>
-:::
+<template data-evidence="1"><p><span class="lang-it">Obiettivo: verificare una coppia autentica prima del processing. Il docente deve fornire le reads dimostrative AmpWrap: i link esistenti sono nel tutorial. Imposta READS sul percorso effettivo, poi confronta ID e conteggi. L’inventario locale attuale non contiene queste reads.</span><span class="lang-en">Objective: verify an authentic pair before processing. The instructor must provide AmpWrap demonstration reads: existing links are in the tutorial. Set READS to the actual path, then compare IDs and counts. The local inventory currently lacks these reads.</span></p><pre><code>READS=/path/to/ampwrap_demo
+ls "$READS"/*fastq.gz
+gzip -cd "$READS/S1_10_L001_R1_001.fastq.gz" | head -n 8
+gzip -cd "$READS/S1_10_L001_R2_001.fastq.gz" | head -n 8
+for fq in "$READS"/*fastq.gz; do
+  printf "%s " "$fq"
+  gzip -cd "$fq" | awk 'END { print NR/4 }'
+done</code></pre><a href="ampwrap.html">AmpWrap</a></template>
 
-::: {.lab-step data-lab-step="terminal"}
-## 1. Preparare il terminale
+<template data-evidence="2"><p><span class="lang-it">Obiettivo: confrontare qualità, adattatori e differenze R1/R2. Usa i programmi reali dall’ambiente del corso, senza attivare il replay LAB03. Apri i report HTML dal file manager; annota una metrica e una decisione motivata.</span><span class="lang-en">Objective: compare quality, adapters and R1/R2 differences. Use real tools in the course environment, without LAB03 replay activation. Open HTML reports in the file manager; record one metric and a justified decision.</span></p><pre><code>command -v fastqc
+command -v multiqc
+mkdir -p results/lab01/fastqc
+fastqc -t 2 -o results/lab01/fastqc "$READS"/*fastq.gz
+multiqc results/lab01/fastqc -o results/lab01/multiqc
+ls results/lab01/multiqc/</code></pre></template>
 
-Usare la risorsa [Bash essenziale](bash.qmd) per terminale, percorsi, file compressi e ambiente Conda.
+<template data-evidence="3"><p><span class="lang-it">Obiettivo: seguire Cutadapt → FIGARO → DADA2. Esamina help e workflow nel tutorial; esegui l’analisi lunga solo se indicato dal docente. Primer e lunghezza sotto sono quelli dell’esempio AmpWrap. Individua il report effettivo e confronta numeratore e denominatore in ogni fase di ritenzione.</span><span class="lang-en">Objective: follow Cutadapt → FIGARO → DADA2. Inspect help and the tutorial workflow; run the long analysis only as directed by the instructor. Primers and length below belong to the AmpWrap example. Locate the actual report and compare numerator and denominator at each retention stage.</span></p><pre><code>ampwrap short --help
+ampwrap short -i "$READS" -a GTGYCAGCMGCCGCGGTAA -A CCGYCAATTYMTTTRAGTTT -l 372 -o results/lab01/ampwrap
+find results/lab01/ampwrap -type f -name final_report.txt</code></pre><a href="ampwrap.html">AmpWrap workflow / report</a></template>
 
-<button class="btn btn-outline-primary btn-sm" type="button" data-complete-step aria-pressed="false">Segna come completato</button>
-:::
+<template data-evidence="4"><p><span class="lang-it">Obiettivo: passare dai risultati di pipeline alla tabella di comunità. Come esempio separato già disponibile, apri SEA4BLUE: confronta conteggi, tassonomia e composizione. Il dataset SEA4BLUE non è presentato come risultato della demo AmpWrap. Nel rapporto distingui reads, ASV e taxa; riporta la ritenzione soltanto se hai il report autentico.</span><span class="lang-en">Objective: move from pipeline results to a community table. As a separate prepared example, inspect SEA4BLUE counts, taxonomy and composition. SEA4BLUE is not claimed as output of the AmpWrap demo. Distinguish reads, ASVs and taxa in your report; record retention only when an authentic report is available.</span></p><a download href="downloads/Sea4Blue-student.zip">SEA4BLUE ZIP</a> · <a href="data-curation/lab02/analysis_summary.csv">CSV</a><a target="_blank" href="figures/lab02/lab02_genus_composition.svg"><img src="figures/lab02/lab02_genus_composition.svg" alt="SEA4BLUE: lab02_genus_composition"></a></template>
 
-::: {.virtual-terminal data-virtual-terminal=""}
-<span class="evidence-label simulated">SIMULAZIONE DIDATTICA</span>
-<pre data-terminal-output>Terminale virtuale: prova `pwd`, `ls`, `cd data`, `head sample_A_R1.fastq.gz`.
-</pre><input aria-label="Comando del terminale virtuale" autocomplete="off" placeholder="Digita un comando e premi Invio">
-:::
+<script src="lab-community-config.js"></script>
+<script src="lab-investigation.js"></script>
 
-::: {.mission-card data-quiz=""}
-### Controlla il ragionamento
-
-Quale osservazione supporta il corretto abbinamento delle reads Illumina?
-
-<label><input type="radio" name="lab01-pair-it" data-correct="true" data-feedback-it="Corretto: R1 e R2 sono i due mate dello stesso campione; le ASV vengono inferite dopo."> Ogni campione ha file R1 e R2 corrispondenti.</label><br>
-<label><input type="radio" name="lab01-pair-it" data-feedback-it="No: lo stesso numero di ASV non verifica l'abbinamento delle reads."> Tutti i campioni hanno lo stesso numero di ASV.</label>
-<p data-quiz-feedback aria-live="polite"></p><button class="btn btn-outline-primary btn-sm" data-check-answer type="button">Verifica risposta</button>
-:::
-
-::: {.lab-step data-lab-step="ampwrap"}
-## 2. Seguire il workflow AmpWrap
-
-Usare la pagina [AmpWrap](ampwrap.qmd) per il controllo di qualità, la rimozione dei primer, l'inferenza delle ASV e l'interpretazione degli output.
-
-<button class="btn btn-outline-primary btn-sm" type="button" data-complete-step aria-pressed="false">Segna come completato</button>
-:::
-
-::: {.mission-card}
-## Percorso guidato (150 minuti)
-
-1. **File e struttura FASTQ** (25 min): identificare coppie R1/R2 e verificare la struttura delle reads.
-2. **Qualità** (30 min): usare i report FastQC/MultiQC disponibili nella pagina [AmpWrap](ampwrap.qmd); la loro interpretazione è reale, l'esecuzione lunga è precalcolata.
-3. **Workflow** (50 min): esaminare il comando AmpWrap, primer, overlap e le fasi Cutadapt, FIGARO e DADA2.
-4. **Output e conclusione** (45 min): confrontare ritenzione delle reads, ASV e tassonomia senza attribuire differenze tecniche a fenomeni biologici.
-:::
-
-::: {.callout-note}
-Le istruzioni, i comandi e gli esempi scientifici rimangono nelle pagine di riferimento. Questa pagina è il punto di ingresso del laboratorio.
-:::
-:::
-
-::: {.lang-block .lang-en}
-::: {.hero}
-# LAB 01 — From FASTQ to ASVs
-
-Linux and AmpWrap for navigating sequencing files and the preprocessing workflow.
-:::
-
-**Duration: 150 minutes.** Opening question: are these paired-end reads suitable for reconstructing microbial communities?
-
-::: {.mode-card}
-**In class:** run essential commands in a real Linux terminal. **At home:** use the virtual terminal below to practise paths; AmpWrap and quality reports are shown as precomputed outputs, not recomputed by the browser.
-:::
-
-::: {.lab-progress aria-label="Laboratory progress"}
-**Progress:** <span data-lab-progress-label>0/2</span>
-<progress data-lab-progress value="0" max="100">0%</progress>
-:::
-
-::: {.lab-step data-lab-step="terminal"}
-## 1. Prepare the terminal
-
-Use the [Bash essentials](bash.qmd) resource for the terminal, paths, compressed files, and the Conda environment.
-
-<button class="btn btn-outline-primary btn-sm" type="button" data-complete-step aria-pressed="false">Mark complete</button>
-:::
-
-::: {.virtual-terminal data-virtual-terminal=""}
-<span class="evidence-label simulated">TEACHING SIMULATION</span>
-<pre data-terminal-output>Virtual terminal: try `pwd`, `ls`, `cd data`, `head sample_A_R1.fastq.gz`.
-</pre><input aria-label="Virtual-terminal command" autocomplete="off" placeholder="Type a command and press Enter">
-:::
-
-::: {.mission-card data-quiz=""}
-### Check your reasoning
-
-Which observation supports correct pairing of Illumina reads?
-
-<label><input type="radio" name="lab01-pair-en" data-correct="true" data-feedback-en="Correct: R1 and R2 are mates from the same sample; ASVs are inferred later."> Each sample has matching R1 and R2 files.</label><br>
-<label><input type="radio" name="lab01-pair-en" data-feedback-en="No: equal ASV counts do not verify read pairing."> Every sample has the same number of ASVs.</label>
-<p data-quiz-feedback aria-live="polite"></p><button class="btn btn-outline-primary btn-sm" data-check-answer type="button">Check answer</button>
-:::
-
-::: {.lab-step data-lab-step="ampwrap"}
-## 2. Follow the AmpWrap workflow
-
-Use the [AmpWrap](ampwrap.qmd) page for quality control, primer removal, ASV inference, and interpretation of outputs.
-
-<button class="btn btn-outline-primary btn-sm" type="button" data-complete-step aria-pressed="false">Mark complete</button>
-:::
-
-::: {.mission-card}
-## Guided route (150 minutes)
-
-1. **Files and FASTQ structure** (25 min): identify R1/R2 pairs and inspect read structure.
-2. **Quality** (30 min): use FastQC/MultiQC reports in [AmpWrap](ampwrap.qmd); their interpretation is real, while the long run is precomputed.
-3. **Workflow** (50 min): examine the AmpWrap command, primers, overlap, and Cutadapt, FIGARO, and DADA2 stages.
-4. **Output and conclusion** (45 min): compare read retention, ASVs, and taxonomy without mistaking technical effects for biological patterns.
-:::
-
-::: {.callout-note}
-Instructions, commands, and scientific examples remain in the reference pages. This page is the laboratory entry point.
-:::
-:::

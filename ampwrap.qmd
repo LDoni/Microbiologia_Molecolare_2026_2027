@@ -107,9 +107,25 @@ Il file finale riassume i passaggi svolti, le reads mantenute e gli output prodo
 
 The final report summarizes the steps performed, the reads retained, and the outputs produced.
 
+::: {.callout-exercise title="Trova e interpreta il report finale / Find and interpret the final report"}
+Non copiare un percorso da questa pagina: prima individua il file prodotto dal tuo run. Dalla cartella del progetto, cerca il report finale nell’output di AmpWrap:
+
 ```bash
-cat ......../final_report.txt
+find short_test_output -type f -name 'final_report.txt'
 ```
+
+Poi sostituisci `PERCORSO_TROVATO` con il percorso restituito da `find` e leggi il report:
+
+```bash
+cat PERCORSO_TROVATO
+```
+
+**Domanda.** Quale passaggio del workflow ha trattenuto la quota minore di reads nel tuo run? Riporta il nome del passaggio e i numeri (o la percentuale) riportati nel `final_report.txt`.
+
+**Question.** Which workflow step retained the smallest fraction of reads in your run? Report the step name and the counts (or percentage) shown in `final_report.txt`.
+
+La risposta dipende dall’output effettivamente prodotto: non esiste un valore unico da memorizzare.
+:::
 
 ## Cosa osservare / What to look for
 

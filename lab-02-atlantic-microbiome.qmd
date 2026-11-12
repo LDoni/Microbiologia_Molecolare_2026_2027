@@ -1,94 +1,47 @@
 ---
-title: "LAB 02 — The Atlantic Microbiome: R and Statistical Analysis"
-toc: true
+title: "LAB 02"
+toc: false
+title-block-style: none
 ---
 
-::: {.lang-block .lang-it}
-::: {.hero}
-# LAB 02 — Il microbioma dell'Atlantico
+# LAB 02 — <span class="lang-it">Il microbioma atlantico</span><span class="lang-en">The Atlantic Microbiome</span>
 
-R e analisi statistica dei dati SEA4BLUE.
-:::
+<p><span class="lang-it">150 minuti · 100 punti formativi. Apri le missioni in ordine; clicca le figure per ingrandirle.</span><span class="lang-en">150 minutes · 100 formative points. Open missions in order; click figures to enlarge.</span></p>
 
-**Durata: 150 minuti.** Domanda iniziale: le comunità batteriche cambiano lungo il transetto atlantico, e quali limiti ha questa interpretazione?
+<div data-investigation="02"></div>
 
-::: {.mode-card}
-**In aula:** eseguire i brevi comandi in RStudio con il progetto SEA4BLUE. **A casa:** scaricare lo stesso materiale e usare le figure e i risultati precomputati della guida; nessun ambiente remoto è richiesto.
-:::
+<template data-evidence="0"><p><span class="lang-it">Obiettivo: aprire il dataset in RStudio e distinguere campioni e taxa. Decomprimi lo ZIP una volta. Dalla root del progetto il percorso è materials/Sea4Blue/phyloseq.rds; con lo ZIP scaricato usa invece il percorso estratto.</span><span class="lang-en">Objective: open the dataset in RStudio and distinguish samples and taxa. Extract the ZIP once. From the project root use materials/Sea4Blue/phyloseq.rds; for the downloaded ZIP use its extracted path.</span></p><a download href="downloads/Sea4Blue-student.zip">SEA4BLUE ZIP</a> · <a href="data-curation/lab02/analysis_summary.csv">CSV</a><pre><code>library(phyloseq)
+library(vegan)
+ps &lt;- readRDS("materials/Sea4Blue/phyloseq.rds")
+nsamples(ps)
+ntaxa(ps)
+head(data.frame(sample_data(ps)))</code></pre><a href="intro-r.html">R / RStudio</a></template>
 
-::: {.lab-progress aria-label="Avanzamento del laboratorio"}
-**Avanzamento:** <span data-lab-progress-label>0/2</span>
-<progress data-lab-progress value="0" max="100">0%</progress>
-:::
+<template data-evidence="1"><p><span class="lang-it">Obiettivo: confrontare profondità e controlli. Abbina gli ID alla tabella metadati; identifica il controllo negativo prima di interpretare il transetto.</span><span class="lang-en">Objective: compare depth and controls. Match IDs to metadata; identify the negative control before interpreting the transect.</span></p><pre><code>sample_sums(ps)
+meta &lt;- data.frame(sample_data(ps))
+summary(sample_sums(ps))
+table(meta$Zone, useNA="ifany")</code></pre><a href="data-curation/lab02/sequencing_depth.csv">Depth CSV</a> · <a href="data-curation/lab02/sample_metadata.csv">Metadata CSV</a><a target="_blank" href="figures/lab02/lab02_sequencing_depth.svg"><img src="figures/lab02/lab02_sequencing_depth.svg" alt="SEA4BLUE: lab02_sequencing_depth"></a></template>
 
-::: {.lab-step data-lab-step="r"}
-## 1. R e RStudio
+<template data-evidence="2"><p><span class="lang-it">Obiettivo: distinguere composizione relativa e diversità entro campione. Applica i filtri dello script verificato e confronta la figura Shannon con la composizione.</span><span class="lang-en">Objective: distinguish relative composition and within-sample diversity. Apply the verified script filters and compare Shannon with composition.</span></p><pre><code>ps_clean &lt;- subset_taxa(ps, (is.na(Family) | Family != "Mitochondria") &amp; (is.na(Order) | Order != "Chloroplast"))
+ps_clean &lt;- prune_taxa(taxa_sums(ps_clean) > 1, ps_clean)
+ps_clean &lt;- subset_samples(ps_clean, !is.na(Zone))
+ps_clean &lt;- prune_taxa(taxa_sums(ps_clean) > 0, ps_clean)
+estimate_richness(ps_clean, measures=c("Observed", "Shannon"))</code></pre><a href="data-curation/lab02/alpha_diversity.csv">Alpha CSV</a><a target="_blank" href="figures/lab02/lab02_alpha_shannon.svg"><img src="figures/lab02/lab02_alpha_shannon.svg" alt="SEA4BLUE: lab02_alpha_shannon"></a><a target="_blank" href="figures/lab02/lab02_genus_composition.svg"><img src="figures/lab02/lab02_genus_composition.svg" alt="SEA4BLUE: lab02_genus_composition"></a></template>
 
-Usare [Introduzione a R](intro-r.qmd) come riferimento per script, oggetti, data frame e grafici.
+<template data-evidence="3"><p><span class="lang-it">Obiettivo: calcolare Bray–Curtis e PCoA con la stessa trasformazione del report. Confronta l’ordinamento con la figura preparata; la rotazione degli assi non cambia le distanze.</span><span class="lang-en">Objective: calculate Bray–Curtis and PCoA with the report transformation. Compare the ordination with the prepared figure; axis rotation does not change distances.</span></p><pre><code>ps_rel &lt;- transform_sample_counts(ps_clean, function(x) x/sum(x))
+m &lt;- as(otu_table(ps_rel), "matrix")
+if (taxa_are_rows(ps_rel)) m &lt;- t(m)
+bray &lt;- vegdist(m, method="bray")
+ord &lt;- cmdscale(bray, k=2, eig=TRUE, add=TRUE)
+plot(ord$points)</code></pre><a href="data-curation/lab02/pcoa_bray_coordinates.csv">PCoA CSV</a><a target="_blank" href="figures/lab02/lab02_bray_pcoa.svg"><img src="figures/lab02/lab02_bray_pcoa.svg" alt="SEA4BLUE: lab02_bray_pcoa"></a></template>
 
-<button class="btn btn-outline-primary btn-sm" type="button" data-complete-step aria-pressed="false">Segna come completato</button>
-:::
+<template data-evidence="4"><p><span class="lang-it">Obiettivo: interpretare effetto, dispersione e limiti ecologici. Confronta il test con il riepilogo validato; scrivi nel rapporto un pattern, due valori e una possibile covariata. Nessuna conclusione libera è valutata automaticamente.</span><span class="lang-en">Objective: interpret effect, dispersion and ecological limits. Compare your test with the verified summary; report a pattern, two values and a potential covariate. Free-text conclusions are not automatically graded.</span></p><pre><code>meta_rel &lt;- data.frame(sample_data(ps_rel))[rownames(m), , drop=FALSE]
+set.seed(42)
+adonis2(bray ~ Zone, data=meta_rel, permutations=999)
+disp &lt;- betadisper(bray, group=meta_rel$Zone)
+set.seed(42)
+permutest(disp, permutations=999)</code></pre><a href="data-curation/lab02/analysis_summary.csv">Statistical summary CSV</a> · <a href="scripts/lab02/analyze_lab02.R">Verified R script</a> · <a href="biostatistica.html">Statistics / Statistica</a></template>
 
-::: {.mission-card}
-## Percorso guidato (150 minuti)
+<script src="lab-community-config.js"></script>
+<script src="lab-investigation.js"></script>
 
-1. **Esplora l'oggetto** (25 min): verificare campioni, metadati e dimensioni del `phyloseq`.
-2. **Composizione e diversità** (35 min): distinguere abbondanza relativa, ricchezza e profondità di sequenziamento.
-3. **Dissimilarità e PCoA** (45 min): interpretare Bray-Curtis senza attribuire automaticamente una causa ambientale.
-4. **PERMANOVA e limiti** (30 min): controllare dispersione e covariazione di longitudine, data e ambiente.
-5. **Sintesi** (15 min): formulare un pattern osservabile e una limitazione.
-:::
-
-::: {.lab-step data-lab-step="sea4blue"}
-## 2. Analizzare SEA4BLUE
-
-Scaricare il [materiale SEA4BLUE](downloads/Sea4Blue.zip) e seguire la pagina [Analisi biostatistica](biostatistica.qmd).
-
-<button class="btn btn-outline-primary btn-sm" type="button" data-complete-step aria-pressed="false">Segna come completato</button>
-:::
-:::
-
-::: {.lang-block .lang-en}
-::: {.hero}
-# LAB 02 — The Atlantic Microbiome
-
-R and statistical analysis of the SEA4BLUE data.
-:::
-
-**Duration: 150 minutes.** Opening question: do bacterial communities change along the Atlantic transect, and what limits that interpretation?
-
-::: {.mode-card}
-**In class:** run short commands in RStudio with the SEA4BLUE project. **At home:** download the same material and use the guided figures and precomputed results; no remote environment is required.
-:::
-
-::: {.lab-progress aria-label="Laboratory progress"}
-**Progress:** <span data-lab-progress-label>0/2</span>
-<progress data-lab-progress value="0" max="100">0%</progress>
-:::
-
-::: {.lab-step data-lab-step="r"}
-## 1. R and RStudio
-
-Use [Introduction to R](intro-r.qmd) as a reference for scripts, objects, data frames, and plots.
-
-<button class="btn btn-outline-primary btn-sm" type="button" data-complete-step aria-pressed="false">Mark complete</button>
-:::
-
-::: {.mission-card}
-## Guided route (150 minutes)
-
-1. **Inspect the object** (25 min): verify samples, metadata, and `phyloseq` dimensions.
-2. **Composition and diversity** (35 min): distinguish relative abundance, richness, and sequencing depth.
-3. **Dissimilarity and PCoA** (45 min): interpret Bray-Curtis without automatically assigning an environmental cause.
-4. **PERMANOVA and limits** (30 min): inspect dispersion and covariation among longitude, date, and environment.
-5. **Synthesis** (15 min): state one observable pattern and one limitation.
-:::
-
-::: {.lab-step data-lab-step="sea4blue"}
-## 2. Analyse SEA4BLUE
-
-Download the [SEA4BLUE material](downloads/Sea4Blue.zip) and follow the [Biostatistics](biostatistica.qmd) page.
-
-<button class="btn btn-outline-primary btn-sm" type="button" data-complete-step aria-pressed="false">Mark complete</button>
-:::
-:::

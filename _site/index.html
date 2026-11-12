@@ -2,17 +2,23 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="it" xml:lang="it"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.27">
+<meta name="generator" content="quarto-1.11.9">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Metabarcoding PhD Course 2026 – Metabarcoding PhD 2026</title>
+<title>Molecular Microbiology 2026/2027</title>
 <style>
-code{white-space: pre-wrap;}
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -67,15 +73,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <meta name="quarto:offset" content="./">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/scrollable-regions/scrollable-regions.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-205b4c0a154287bebdb0c1bd80faae2f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-4e3b523c642d9e1542e2953f683b2335.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -109,19 +115,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="floating nav-fixed quarto-light">
+<body class="floating nav-fixed quarto-light"><a id="quarto-skip-link" class="visually-hidden-focusable" href="#quarto-document-content">Vai al contenuto principale</a>
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark" aria-label="Sito web">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">Metabarcoding PhD 2026</span>
+    <span class="navbar-title">Molecular Microbiology 2026/2027</span>
     </a>
   </div>
-            <div id="quarto-search" class="" title="Ricerca"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Attiva/disattiva la navigazione" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Attiva/disattiva la navigazione" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -130,30 +135,65 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <a class="nav-link active" href="./index.html" aria-current="page"> 
 <span class="menu-text">Home</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./programma.html"> 
-<span class="menu-text">Programma</span></a>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-practical-labs" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Practical Labs</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-practical-labs">    
+        <li>
+    <a class="dropdown-item" href="./lab-01-fastq-asv.html">
+ <span class="dropdown-text">LAB 01 — From FASTQ to ASVs</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./bash.html"> 
-<span class="menu-text">Bash</span></a>
+        <li>
+    <a class="dropdown-item" href="./lab-02-atlantic-microbiome.html">
+ <span class="dropdown-text">LAB 02 — The Atlantic Microbiome</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./ampwrap.html"> 
-<span class="menu-text">AmpWrap</span></a>
+        <li>
+    <a class="dropdown-item" href="./lab-03-interactive-investigation.html">
+ <span class="dropdown-text">LAB 03 — Interactive Investigation</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./intro-r.html"> 
-<span class="menu-text">Introduzione a R</span></a>
+        <li>
+    <a class="dropdown-item" href="./lab-04-virtual-experiment.html">
+ <span class="dropdown-text">LAB 04 — Virtual Experimental Investigation</span></a>
   </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-resources" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Resources</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-resources">    
+        <li>
+    <a class="dropdown-item" href="./programma.html">
+ <span class="dropdown-text">Course overview</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./bash.html">
+ <span class="dropdown-text">Bash</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./ampwrap.html">
+ <span class="dropdown-text">AmpWrap</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./intro-r.html">
+ <span class="dropdown-text">Introduction to R</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./biostatistica.html">
+ <span class="dropdown-text">Biostatistics</span></a>
+  </li>  
+    </ul>
+  </li>
   <li class="nav-item">
-    <a class="nav-link" href="./biostatistica.html"> 
-<span class="menu-text">Biostatistica</span></a>
+    <a class="nav-link" href="https://github.com/LDoni/Microbiologia_Molecolare_2026_2027#readme"> 
+<span class="menu-text">Setup</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
 </div>
+            <div id="quarto-search" class="" title="Ricerca"></div>
       </div> <!-- /container-fluid -->
     </nav>
 </header>
@@ -165,11 +205,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content column-page" id="quarto-document-content">
+<main class="content column-page" id="quarto-document-content" tabindex="-1">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Metabarcoding PhD Course 2026</h1>
+<h1 class="title">Molecular Microbiology 2026/2027</h1>
 </div>
 
 
@@ -187,36 +227,59 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <div class="lang-block lang-it">
-<section id="dal-sequenziamento-alla-comunità-microbica" class="level1 hero">
-<h1>Dal sequenziamento alla comunità microbica</h1>
-<p>Materiale pratico per il corso PhD 2026: terminale Linux, AmpWrap, R/RStudio e analisi biostatistica di dati di metabarcoding.</p>
+<section id="microbiologia-molecolare" class="level1 hero">
+<h1>Microbiologia Molecolare</h1>
+<p>Piattaforma pratica per il corso di <strong>Microbiologia Molecolare</strong>, Università di Genova, anno accademico 2026/2027. Quattro indagini scientifiche guidate, <strong>150 minuti ciascuna</strong>.</p>
 </section>
-<section id="percorso-della-giornata" class="level2">
-<h2 class="anchored" data-anchor-id="percorso-della-giornata">Percorso della giornata</h2>
+<section id="laboratori-pratici" class="level2">
+<h2 class="anchored" data-anchor-id="laboratori-pratici">Laboratori pratici</h2>
 <div class="grid">
-<div class="g-col-12 g-col-md-4">
-<section id="comprendere" class="level3 course-card">
-<h3 class="anchored" data-anchor-id="comprendere">1. Comprendere</h3>
-<p>Disegno sperimentale, marker, primer, controlli, sequenziamento e passaggio dalle reads alle ASV.</p>
+<div class="g-col-12 g-col-md-6">
+<section id="lab-01" class="level3 course-card lab-card">
+<h3 class="anchored" data-anchor-id="lab-01">LAB 01</h3>
+<section id="from-fastq-to-asvs-linux-and-ampwrap" class="level4">
+<h4 class="anchored" data-anchor-id="from-fastq-to-asvs-linux-and-ampwrap">From FASTQ to ASVs: Linux and AmpWrap</h4>
+<p>Dal terminale Linux alle ASV: comandi Bash essenziali, AmpWrap e output precalcolati consultabili anche da casa.</p>
+<p><a href="./lab-01-fastq-asv.html" class="btn btn-primary">Apri il laboratorio</a></p>
+</section>
 </section>
 </div>
-<div class="g-col-12 g-col-md-4">
-<section id="elaborare" class="level3 course-card">
-<h3 class="anchored" data-anchor-id="elaborare">2. Elaborare</h3>
-<p>Comandi Bash essenziali e workflow AmpWrap: controllo qualità, trimming, inferenza delle ASV e tassonomia.</p>
+<div class="g-col-12 g-col-md-6">
+<section id="lab-02" class="level3 course-card lab-card">
+<h3 class="anchored" data-anchor-id="lab-02">LAB 02</h3>
+<section id="the-atlantic-microbiome-r-and-statistical-analysis" class="level4">
+<h4 class="anchored" data-anchor-id="the-atlantic-microbiome-r-and-statistical-analysis">The Atlantic Microbiome: R and Statistical Analysis</h4>
+<p>Esplorazione e analisi statistica in R dei dati SEA4BLUE dell’Atlantico.</p>
+<p><a href="./lab-02-atlantic-microbiome.html" class="btn btn-primary">Apri il laboratorio</a></p>
+</section>
 </section>
 </div>
-<div class="g-col-12 g-col-md-4">
-<section id="analizzare" class="level3 course-card">
-<h3 class="anchored" data-anchor-id="analizzare">3. Analizzare</h3>
-<p>Esplorazione in R, filtraggio, diversità alfa e beta, PERMANOVA, composizione tassonomica e RDA.</p>
+<div class="g-col-12 g-col-md-6">
+<section id="lab-03" class="level3 course-card lab-card">
+<h3 class="anchored" data-anchor-id="lab-03">LAB 03</h3>
+<section id="interactive-microbiology-investigation" class="level4">
+<h4 class="anchored" data-anchor-id="interactive-microbiology-investigation">Interactive Microbiology Investigation</h4>
+<p>Genomica batterica, virulenza, AMR e interpretazione epidemiologica prudente.</p>
+<p><a href="./lab-03-interactive-investigation.html" class="btn btn-primary">Apri il laboratorio</a></p>
+</section>
+</section>
+</div>
+<div class="g-col-12 g-col-md-6">
+<section id="lab-04" class="level3 course-card lab-card">
+<h3 class="anchored" data-anchor-id="lab-04">LAB 04</h3>
+<section id="virtual-experimental-microbiology-investigation" class="level4">
+<h4 class="anchored" data-anchor-id="virtual-experimental-microbiology-investigation">Virtual Experimental Microbiology Investigation</h4>
+<p>Host range fago-<em>Klebsiella</em> e caso CRISPR-Cas PA14/DMS3, mantenuti come sistemi distinti.</p>
+<p><a href="./lab-04-virtual-experiment.html" class="btn btn-primary">Apri il laboratorio</a></p>
+</section>
 </section>
 </div>
 </div>
 </section>
-<section id="prima-di-iniziare" class="level2">
-<h2 class="anchored" data-anchor-id="prima-di-iniziare">Prima di iniziare</h2>
-<p>L’ambiente software deve essere installato e verificato <strong>prima del corso</strong>. Seguire le <a href="https://github.com/EBosi/phd-microbiome-2026#readme">istruzioni complete nella repository</a> e controllare l’installazione con:</p>
+<section id="risorse-e-preparazione" class="level2">
+<h2 class="anchored" data-anchor-id="risorse-e-preparazione">Risorse e preparazione</h2>
+<p>Tutti i laboratori usano cinque missioni e 100 punti di autovalutazione; nickname, tentativi e rapporto restano nel browser. Per LAB01 il docente deve preparare le reads autentiche della demo AmpWrap e verificare FastQC/MultiQC; il replay LAB03 va attivato solo nel laboratorio dedicato.</p>
+<p>Le pagine di <a href="./bash.html">Bash</a>, <a href="./ampwrap.html">AmpWrap</a>, <a href="./intro-r.html">Introduzione a R</a> e <a href="./biostatistica.html">Biostatistica</a> restano disponibili come materiale di riferimento. L’ambiente software deve essere installato e verificato <strong>prima del corso</strong>; seguire le <a href="https://github.com/LDoni/Microbiologia_Molecolare_2026_2027#readme">istruzioni complete nel repository</a>.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> activate metabarcoding-phd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">Rscript</span> env/check_environment.R</span></code></pre></div><button title="Copia negli appunti" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="callout callout-style-default callout-important callout-titled">
@@ -233,49 +296,72 @@ Importante
 </div>
 </div>
 </section>
-<section id="materiale-per-la-biostatistica" class="level2">
-<h2 class="anchored" data-anchor-id="materiale-per-la-biostatistica">Materiale per la biostatistica</h2>
+<section id="materiale-per-lab-02" class="level2">
+<h2 class="anchored" data-anchor-id="materiale-per-lab-02">Materiale per LAB 02</h2>
 <div class="download-box">
 <p>Scaricare e decomprimere il dataset <strong>prima di aprire RStudio</strong>.</p>
-<p><a href="downloads/Sea4Blue.zip" class="btn btn-primary" download="Sea4Blue.zip">Scarica Sea4Blue.zip</a></p>
+<p><a href="downloads/Sea4Blue-student.zip" class="btn btn-primary" download="Sea4Blue.zip">Scarica Sea4Blue.zip</a></p>
 </div>
 </section>
 <section id="come-usare-questo-sito" class="level2">
 <h2 class="anchored" data-anchor-id="come-usare-questo-sito">Come usare questo sito</h2>
-<p>Le pagine seguono l’ordine della lezione. I blocchi di codice della sezione di biostatistica sono volutamente brevi: eseguiteli uno alla volta, osservate l’oggetto prodotto e rispondete alle domande prima di proseguire.</p>
+<p>Ogni laboratorio raccoglie il suo percorso e collega alle risorse di supporto. I comandi brevi vengono eseguiti realmente in aula; i workflow lunghi sono riprodotti con output precalcolati e chiaramente etichettati. Avanzamento e note sono salvati solo nel browser.</p>
 </section>
 </div>
 <div class="lang-block lang-en">
-<section id="from-sequencing-to-microbial-communities" class="level1 hero">
-<h1>From sequencing to microbial communities</h1>
-<p>Practical material for the 2026 PhD course: Linux terminal, AmpWrap, R/RStudio, and biostatistical analysis of metabarcoding data.</p>
+<section id="molecular-microbiology" class="level1 hero">
+<h1>Molecular Microbiology</h1>
+<p>Practical platform for <strong>Molecular Microbiology</strong>, University of Genoa, academic year 2026/2027. Four guided scientific investigations, <strong>150 minutes each</strong>.</p>
 </section>
-<section id="course-flow" class="level2">
-<h2 class="anchored" data-anchor-id="course-flow">Course flow</h2>
+<section id="practical-laboratories" class="level2">
+<h2 class="anchored" data-anchor-id="practical-laboratories">Practical laboratories</h2>
 <div class="grid">
-<div class="g-col-12 g-col-md-4">
-<section id="understand" class="level3 course-card">
-<h3 class="anchored" data-anchor-id="understand">1. Understand</h3>
-<p>Experimental design, markers, primers, controls, sequencing, and the path from reads to ASVs.</p>
+<div class="g-col-12 g-col-md-6">
+<section id="lab-01-1" class="level3 course-card lab-card">
+<h3 class="anchored" data-anchor-id="lab-01-1">LAB 01</h3>
+<section id="from-fastq-to-asvs-linux-and-ampwrap-1" class="level4">
+<h4 class="anchored" data-anchor-id="from-fastq-to-asvs-linux-and-ampwrap-1">From FASTQ to ASVs: Linux and AmpWrap</h4>
+<p>From the Linux terminal to ASVs: essential Bash commands, AmpWrap, and precomputed outputs that can also be inspected from home.</p>
+<p><a href="./lab-01-fastq-asv.html" class="btn btn-primary">Open laboratory</a></p>
+</section>
 </section>
 </div>
-<div class="g-col-12 g-col-md-4">
-<section id="process" class="level3 course-card">
-<h3 class="anchored" data-anchor-id="process">2. Process</h3>
-<p>Essential Bash commands and the AmpWrap workflow: quality control, trimming, ASV inference, and taxonomy.</p>
+<div class="g-col-12 g-col-md-6">
+<section id="lab-02-1" class="level3 course-card lab-card">
+<h3 class="anchored" data-anchor-id="lab-02-1">LAB 02</h3>
+<section id="the-atlantic-microbiome-r-and-statistical-analysis-1" class="level4">
+<h4 class="anchored" data-anchor-id="the-atlantic-microbiome-r-and-statistical-analysis-1">The Atlantic Microbiome: R and Statistical Analysis</h4>
+<p>Exploration and statistical analysis in R of the Atlantic SEA4BLUE data.</p>
+<p><a href="./lab-02-atlantic-microbiome.html" class="btn btn-primary">Open laboratory</a></p>
+</section>
 </section>
 </div>
-<div class="g-col-12 g-col-md-4">
-<section id="analyze" class="level3 course-card">
-<h3 class="anchored" data-anchor-id="analyze">3. Analyze</h3>
-<p>Exploration in R, filtering, alpha and beta diversity, PERMANOVA, taxonomic composition, and RDA.</p>
+<div class="g-col-12 g-col-md-6">
+<section id="lab-03-1" class="level3 course-card lab-card">
+<h3 class="anchored" data-anchor-id="lab-03-1">LAB 03</h3>
+<section id="interactive-microbiology-investigation-1" class="level4">
+<h4 class="anchored" data-anchor-id="interactive-microbiology-investigation-1">Interactive Microbiology Investigation</h4>
+<p>Bacterial genomics, virulence, AMR, and careful epidemiological interpretation.</p>
+<p><a href="./lab-03-interactive-investigation.html" class="btn btn-primary">Open laboratory</a></p>
+</section>
+</section>
+</div>
+<div class="g-col-12 g-col-md-6">
+<section id="lab-04-1" class="level3 course-card lab-card">
+<h3 class="anchored" data-anchor-id="lab-04-1">LAB 04</h3>
+<section id="virtual-experimental-microbiology-investigation-1" class="level4">
+<h4 class="anchored" data-anchor-id="virtual-experimental-microbiology-investigation-1">Virtual Experimental Microbiology Investigation</h4>
+<p>Phage–<em>Klebsiella</em> host range and a separate PA14/DMS3 CRISPR-Cas case.</p>
+<p><a href="./lab-04-virtual-experiment.html" class="btn btn-primary">Open laboratory</a></p>
+</section>
 </section>
 </div>
 </div>
 </section>
-<section id="before-you-start" class="level2">
-<h2 class="anchored" data-anchor-id="before-you-start">Before you start</h2>
-<p>The software environment must be installed and checked <strong>before the course</strong>. Follow the <a href="https://github.com/EBosi/phd-microbiome-2026#readme">full instructions in the repository</a> and verify the installation with:</p>
+<section id="resources-and-setup" class="level2">
+<h2 class="anchored" data-anchor-id="resources-and-setup">Resources and setup</h2>
+<p>All laboratories use five missions and 100 formative points; nickname, attempts and the report stay in the browser. For LAB01 the instructor must prepare authentic AmpWrap demonstration reads and check FastQC/MultiQC. Activate the LAB03 replay only for its dedicated laboratory.</p>
+<p>The <a href="./bash.html">Bash</a>, <a href="./ampwrap.html">AmpWrap</a>, <a href="./intro-r.html">Introduction to R</a>, and <a href="./biostatistica.html">Biostatistics</a> pages remain available as reference resources. Install and check the software environment <strong>before the course</strong>; follow the <a href="https://github.com/LDoni/Microbiologia_Molecolare_2026_2027#readme">full repository instructions</a>.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> activate metabarcoding-phd</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">Rscript</span> env/check_environment.R</span></code></pre></div><button title="Copia negli appunti" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="callout callout-style-default callout-important callout-titled">
@@ -292,16 +378,16 @@ Importante
 </div>
 </div>
 </section>
-<section id="biostatistics-material" class="level2">
-<h2 class="anchored" data-anchor-id="biostatistics-material">Biostatistics material</h2>
+<section id="lab-02-material" class="level2">
+<h2 class="anchored" data-anchor-id="lab-02-material">LAB 02 material</h2>
 <div class="download-box">
 <p>Download and unzip the dataset <strong>before opening RStudio</strong>.</p>
-<p><a href="downloads/Sea4Blue.zip" class="btn btn-primary" download="Sea4Blue.zip">Download Sea4Blue.zip</a></p>
+<p><a href="downloads/Sea4Blue-student.zip" class="btn btn-primary" download="Sea4Blue.zip">Download Sea4Blue.zip</a></p>
 </div>
 </section>
 <section id="how-to-use-this-site" class="level2">
 <h2 class="anchored" data-anchor-id="how-to-use-this-site">How to use this site</h2>
-<p>The pages follow the lesson order. The code blocks in the biostatistics section are intentionally short: run them one at a time, inspect the object produced, and answer the questions before moving on.</p>
+<p>Each laboratory gathers its pathway and links to supporting resources. Short commands run for real in class; long workflows are transparent, labelled replays of precomputed output. Progress and notes are saved only in the browser.</p>
 </section>
 </div>
 
@@ -319,12 +405,21 @@ document.addEventListener("DOMContentLoaded", () => {
   const buttons = Array.from(document.querySelectorAll(".lang-toggle"));
   if (!buttons.length) return;
 
-  const stored = localStorage.getItem("sea4blue-lang");
+  const stored = localStorage.getItem("molecular-microbiology-lang");
 
   function setLang(lang) {
     root.classList.remove("lang-it", "lang-en");
     root.classList.add(`lang-${lang}`);
-    localStorage.setItem("sea4blue-lang", lang);
+    root.lang = lang;
+    const translations = { 'Practical Labs': 'Laboratori', 'Resources': 'Risorse', 'Course overview': 'Programma', 'Introduction to R': 'Introduzione a R', 'Biostatistics': 'Biostatistica', 'LAB 03 — Interactive Investigation': 'LAB 03 — Indagine interattiva', 'LAB 04 — Virtual Experimental Investigation': 'LAB 04 — Esperimento virtuale' };
+    translations['LAB 01 — From FASTQ to ASVs'] = 'LAB 01 — Da FASTQ ad ASV';
+    translations['LAB 02 — The Atlantic Microbiome'] = 'LAB 02 — Il microbioma atlantico';
+    document.querySelectorAll('.navbar a .menu-text, .navbar .dropdown-text').forEach(node => {
+      if (!node.dataset.english) node.dataset.english = node.textContent.trim();
+      const original = node.dataset.english;
+      node.textContent = lang === 'it' ? (translations[original] || original) : original;
+    });
+    localStorage.setItem("molecular-microbiology-lang", lang);
     buttons.forEach((button) => {
       button.classList.toggle("is-active", button.dataset.lang === lang);
     });
@@ -337,6 +432,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 </script>
+<script src="lab-components.js" defer=""></script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -410,12 +506,13 @@ document.addEventListener("DOMContentLoaded", () => {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/ebosi\.github\.io\/phd-microbiome-2026\/");
+        var filterRegex = new RegExp("https:\/\/ldoni\.github\.io\/Microbiologia_Molecolare_2026_2027\/");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
       // Inspect non-navigation links and adorn them if external
-     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      window.quartoDecorateExternalLinks = function (root) {
+     var links = (root || window.document).querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
       for (var i=0; i<links.length; i++) {
         const link = links[i];
         if (!isInternal(link.href)) {
@@ -424,8 +521,69 @@ document.addEventListener("DOMContentLoaded", () => {
           if (link.dataset.originalHref !== undefined) {
             link.href = link.dataset.originalHref;
           }
+          if (!link.classList.contains('no-external-icon')) {
+          }
         }
       }
+      };
+      window.quartoDecorateExternalLinks(window.document);
+    // Esc closes the popup (WCAG 1.4.13) and focus leaving both trigger and
+    // popup closes it (WCAG 2.4.11); tippy handles neither for interactive popups.
+    const hideOnEscAndFocusOut = {
+      name: 'hideOnEscAndFocusOut',
+      defaultValue: true,
+      fn(instance) {
+        const dismiss = () => {
+          // A show scheduled by the trigger delay would otherwise reopen it
+          instance.clearDelayTimeouts();
+          instance.hide();
+        };
+        const onKeyDown = (event) => {
+          if (event.key !== 'Escape') {
+            return;
+          }
+          // Keep Esc from also reaching page handlers (e.g. reveal.js overview),
+          // except an open reveal.js slide menu, which Esc should close too.
+          // The menu handles keys only when its keyboard option is on.
+          const menuHandlesEsc = window.Reveal?.getPlugin?.('menu')?.isOpen() &&
+            window.Reveal.getConfig().menu?.keyboard !== false;
+          if (!menuHandlesEsc) {
+            event.stopPropagation();
+          }
+          if (instance.popper.contains(window.document.activeElement)) {
+            // Disabled while refocusing so the focus trigger does not reopen it
+            instance.disable();
+            instance.reference.focus();
+            instance.enable();
+          }
+          dismiss();
+        };
+        const onFocusOut = (event) => {
+          const target = event.relatedTarget;
+          if (target && !instance.reference.contains(target) &&
+              !instance.popper.contains(target)) {
+            dismiss();
+          }
+        };
+        // On the trigger too: a click trigger (code-annotations: select) has no
+        // blur handling. Attached for the instance's lifetime so leaving the
+        // trigger also cancels a show still pending on the trigger delay.
+        instance.reference.addEventListener('focusout', onFocusOut);
+        return {
+          onShow() {
+            window.document.addEventListener('keydown', onKeyDown, true);
+            instance.popper.addEventListener('focusout', onFocusOut);
+          },
+          onHide() {
+            window.document.removeEventListener('keydown', onKeyDown, true);
+            instance.popper.removeEventListener('focusout', onFocusOut);
+          },
+          onDestroy() {
+            instance.reference.removeEventListener('focusout', onFocusOut);
+          },
+        };
+      },
+    };
     function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
       const config = {
         allowHTML: true,
@@ -439,6 +597,7 @@ document.addEventListener("DOMContentLoaded", () => {
         interactiveBorder: 10,
         theme: 'quarto',
         placement: 'bottom-start',
+        plugins: [hideOnEscAndFocusOut],
       };
       if (contentFn) {
         config.content = contentFn;
@@ -601,44 +760,54 @@ document.addEventListener("DOMContentLoaded", () => {
           const lineIds = lines.map((line) => {
             return targetCell + "-" + line;
           })
-          let top = null;
-          let height = null;
-          let parent = null;
+          // Each band is positioned against its own containing block, which is
+          // not the offsetParent of the lines, so place it from client rects.
+          const placeBand = (band, firstEl, lastEl, codeBlock) => {
+            const container = band.offsetParent;
+            if (container === null) {
+              return;
+            }
+            const containerRect = container.getBoundingClientRect();
+            // Reveal.js scales slides with a transform, so convert client
+            // pixels back to the CSS pixels of the container.
+            const scale = containerRect.height / container.offsetHeight || 1;
+            const firstRect = firstEl.getBoundingClientRect();
+            const lastRect = lastEl.getBoundingClientRect();
+            const top = (firstRect.top - containerRect.top) / scale - container.clientTop + container.scrollTop;
+            const height = (lastRect.bottom - firstRect.top) / scale;
+            band.style.top = top - 2 + "px";
+            band.style.height = height + 4 + "px";
+            if (codeBlock) {
+              // Without the copy button wrapper, the containing block is wider
+              // than the code block, so span the code block explicitly.
+              const blockRect = codeBlock.getBoundingClientRect();
+              band.style.left = (blockRect.left - containerRect.left) / scale - container.clientLeft + container.scrollLeft + "px";
+              band.style.width = blockRect.width / scale + "px";
+            }
+          };
           if (lineIds.length > 0) {
-              //compute the position of the single el (top and bottom and make a div)
-              const el = window.document.getElementById(lineIds[0]);
-              top = el.offsetTop;
-              height = el.offsetHeight;
-              parent = el.parentElement.parentElement;
-            if (lineIds.length > 1) {
-              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
-              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
-              height = bottom - top;
+            const el = window.document.getElementById(lineIds[0]);
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const parent = el.parentElement.parentElement;
+            // cook up a div (if necessary) and position it
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
             }
-            if (top !== null && height !== null && parent !== null) {
-              // cook up a div (if necessary) and position it 
-              let div = window.document.getElementById("code-annotation-line-highlight");
-              if (div === null) {
-                div = window.document.createElement("div");
-                div.setAttribute("id", "code-annotation-line-highlight");
-                div.style.position = 'absolute';
-                parent.appendChild(div);
-              }
-              div.style.top = top - 2 + "px";
-              div.style.height = height + 4 + "px";
-              div.style.left = 0;
-              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
-              if (gutterDiv === null) {
-                gutterDiv = window.document.createElement("div");
-                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
-                gutterDiv.style.position = 'absolute';
-                const codeCell = window.document.getElementById(targetCell);
-                const gutter = codeCell.querySelector('.code-annotation-gutter');
-                gutter.appendChild(gutterDiv);
-              }
-              gutterDiv.style.top = top - 2 + "px";
-              gutterDiv.style.height = height + 4 + "px";
+            placeBand(div, el, lastEl, parent.closest("div.sourceCode") || parent);
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
             }
+            placeBand(gutterDiv, el, lastEl);
             selectedAnnoteEl = annoteEl;
           }
         };
@@ -737,19 +906,22 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
   </script>
+  <script type="application/javascript">
+  window.quartoScrollableRegionsLabels = {"code":"Codice scorrevole","output":"Uscita scorrevole"};
+  </script>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p>Metabarcoding PhD Course 2026</p>
+<p>Molecular Microbiology · University of Genoa · 2026/2027</p>
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><ul><li><a href="https://github.com/EBosi/phd-microbiome-2026/blob/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Mostra il codice</a></li><li><a href="https://github.com/EBosi/phd-microbiome-2026/issues/new" class="toc-action"><i class="bi empty"></i>Segnala un problema</a></li></ul></div></div>
+    <div class="toc-actions"><ul><li><a href="https://github.com/LDoni/Microbiologia_Molecolare_2026_2027/blob/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Mostra il codice</a></li><li><a href="https://github.com/LDoni/Microbiologia_Molecolare_2026_2027/issues/new" class="toc-action"><i class="bi empty"></i>Segnala un problema</a></li></ul></div></div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/EBosi/phd-microbiome-2026">
+    <a class="nav-link" href="https://github.com/LDoni/Microbiologia_Molecolare_2026_2027">
       <i class="bi bi-github" role="img">
 </i> 
     </a>

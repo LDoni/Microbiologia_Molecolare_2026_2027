@@ -21,3 +21,34 @@ Miniforge3-Linux-x86_64.sh
 **/*.quarto_ipynb
 
 /.quarto/
+
+# Local research assets and installations remain on disk only.
+/.local-*/
+/ecoli_outbreak/
+/scientific-pack/
+/reports/*
+!/reports/site_publication.md
+/*Case_Pack.zip
+/*Scientific_Pack*.zip
+/*Design_Pack*.zip
+/lab03_case_review.zip
+**/instructor*
+**/INSTRUCTOR*
+**/*INSTRUCTOR_ONLY*
+**/*mapping.csv
+**/__pycache__/
+**/*.pyc
+**/*.fastq*
+**/*.fq.gz
+/data-curation/*
+!/data-curation/lab02/
+!/data-curation/lab04/
+/data-curation/lab04/*
+!/data-curation/lab04/lab04_host_range_verified.csv
+!/data-curation/lab04/derived/
+/downloads/Sea4Blue.zip
+/_site/downloads/Sea4Blue.zip
+.env
+.env.*
+/.aws/
+/.codex/

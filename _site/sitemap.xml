@@ -1,27 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://ebosi.github.io/phd-microbiome-2026/biostatistica.html</loc>
-    <lastmod>2026-07-22T11:23:03.713Z</lastmod>
+    <loc>https://ldoni.github.io/Microbiologia_Molecolare_2026_2027/biostatistica.html</loc>
+    <lastmod>2026-11-12T12:00:53.908Z</lastmod>
   </url>
   <url>
-    <loc>https://ebosi.github.io/phd-microbiome-2026/ampwrap.html</loc>
-    <lastmod>2026-07-22T11:11:20.550Z</lastmod>
+    <loc>https://ldoni.github.io/Microbiologia_Molecolare_2026_2027/ampwrap.html</loc>
+    <lastmod>2026-11-10T16:16:47.855Z</lastmod>
   </url>
   <url>
-    <loc>https://ebosi.github.io/phd-microbiome-2026/programma.html</loc>
-    <lastmod>2026-07-22T09:19:39.099Z</lastmod>
+    <loc>https://ldoni.github.io/Microbiologia_Molecolare_2026_2027/lab-04-virtual-experiment.html</loc>
+    <lastmod>2026-11-12T10:00:21.179Z</lastmod>
   </url>
   <url>
-    <loc>https://ebosi.github.io/phd-microbiome-2026/index.html</loc>
-    <lastmod>2026-07-22T09:16:10.096Z</lastmod>
+    <loc>https://ldoni.github.io/Microbiologia_Molecolare_2026_2027/lab-02-atlantic-microbiome.html</loc>
+    <lastmod>2026-11-12T12:00:53.908Z</lastmod>
   </url>
   <url>
-    <loc>https://ebosi.github.io/phd-microbiome-2026/bash.html</loc>
-    <lastmod>2026-07-22T10:52:16.837Z</lastmod>
+    <loc>https://ldoni.github.io/Microbiologia_Molecolare_2026_2027/programma.html</loc>
+    <lastmod>2026-11-12T12:00:53.908Z</lastmod>
   </url>
   <url>
-    <loc>https://ebosi.github.io/phd-microbiome-2026/intro-r.html</loc>
-    <lastmod>2026-07-24T07:11:58.139Z</lastmod>
+    <loc>https://ldoni.github.io/Microbiologia_Molecolare_2026_2027/index.html</loc>
+    <lastmod>2026-11-12T12:00:53.908Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ldoni.github.io/Microbiologia_Molecolare_2026_2027/lab-01-fastq-asv.html</loc>
+    <lastmod>2026-11-12T12:00:53.908Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ldoni.github.io/Microbiologia_Molecolare_2026_2027/lab-03-interactive-investigation.html</loc>
+    <lastmod>2026-11-12T10:00:21.179Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ldoni.github.io/Microbiologia_Molecolare_2026_2027/bash.html</loc>
+    <lastmod>2026-11-10T09:31:38.990Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ldoni.github.io/Microbiologia_Molecolare_2026_2027/intro-r.html</loc>
+    <lastmod>2026-11-10T09:31:39.000Z</lastmod>
   </url>
 </urlset>

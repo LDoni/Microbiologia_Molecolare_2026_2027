@@ -11,7 +11,7 @@ I campioni SEA4BLUE sono stati raccolti nell'Oceano Atlantico settentrionale, da
 
 Il gene 16S rRNA, regione V4, è stato amplificato partendo da 5 ng di DNA per campione.
 
-[Scarica Sea4Blue.zip](downloads/Sea4Blue.zip){.btn .btn-primary download="Sea4Blue.zip"}
+[Scarica Sea4Blue.zip](downloads/Sea4Blue-student.zip){.btn .btn-primary download="Sea4Blue.zip"}
 
 ![](figures/intro/Sea4Blue_page-0001.jpg){fig-align="center" width="86%"}
 
@@ -336,13 +336,15 @@ plot_ordination(phyloseq_obj_css, otu.ord, color = "Zone", axes = c(1, 2)) +
 
 ![](figures/biostatistica/06-pcoa-bray.png){fig-align="center" width="90%"}
 
-::: {.callout-question title="Domanda di interpretazione"}
-Guardando alpha e beta diversity insieme, quali campioni vi sembrano più diversi dagli altri lungo il transetto? La differenza osservata sembra dipendere più dalla zona geografica o da un campione particolare?
+::: {.callout-question title="Checkpoint 1 — leggere la PCoA"}
+Guardate prima le **distanze**, non il nome delle zone: quali due o tre punti sono più vicini tra loro? Quale punto o piccolo gruppo è più lontano? Poi controllate i colori: i campioni vicini appartengono soprattutto alla stessa zona oppure i colori si mescolano?
+
+Scrivete una frase descrittiva: “Nel grafico, ___ è più simile a ___ che a ___”. Non scrivete ancora che una variabile ambientale *causa* il pattern.
 :::
 
 ## Composizione della comunità e RDA
 
-Prima guardiamo la composizione tassonomica a livello di genere, poi chiudiamo con una RDA vincolata dalla longitudine e dalla richness.
+Prima guardiamo la composizione tassonomica a livello di genere, poi usiamo la RDA per riassumere l'associazione tra composizione e variabili del transetto.
 
 ```r
 # Usiamo una funzione helper per preparare la composizione
@@ -361,12 +363,10 @@ ggplot(data = data_glom, aes(x = Sample, y = Abundance, fill = Genus)) +
 
 ![](figures/biostatistica/08-composition-all.png){fig-align="center" width="95%"}
 
-::: {.callout-question title="Cosa osservate?"}
-Quali gruppi tassonomici dominano e cambiano di più tra le zone?
-:::
+::: {.callout-question title="Checkpoint 2 — leggere il barplot"}
+Scegliete **un genere identificabile dalla legenda**. In quale zona sembra più abbondante? Il suo colore è simile in tutti i campioni della zona oppure cambia molto da campione a campione?
 
-::: {.callout-question title="Cosa osservate?"}
-Quali gruppi tassonomici dominano e cambiano di più tra le zone?
+Ricordate: ogni barra vale 100%. Il grafico mostra **abbondanze relative**, quindi non dice quante cellule erano presenti in valore assoluto.
 :::
 
 ```r
@@ -412,12 +412,10 @@ p2 +
 
 ![](figures/biostatistica/09-rda.png){fig-align="center" width="90%"}
 
-::: {.callout-question title="Cosa osservate?"}
-Le frecce della RDA vi suggeriscono una relazione più forte con la longitudine o con la richness?
-:::
+::: {.callout-question title="Checkpoint 3 — collegare RDA e transetto"}
+Seguite la freccia **Longitude**: quali campioni si trovano grossomodo nella sua direzione e quali nella direzione opposta? Questa disposizione è coerente con il gradiente visto nella PCoA?
 
-::: {.callout-question title="Cosa osservate?"}
-Le frecce della RDA vi suggeriscono una relazione più forte con la longitudine o con la richness?
+Le frecce indicano associazioni nella configurazione RDA; non dimostrano che longitudine o richness siano una causa biologica del cambiamento di comunità.
 :::
 
 
@@ -430,7 +428,7 @@ SEA4BLUE samples were collected in the North Atlantic, from Florida to the Azore
 
 The V4 region of the 16S rRNA gene was amplified starting from 5 ng of DNA per sample.
 
-[Download Sea4Blue.zip](downloads/Sea4Blue.zip){.btn .btn-primary download="Sea4Blue.zip"}
+[Download Sea4Blue.zip](downloads/Sea4Blue-student.zip){.btn .btn-primary download="Sea4Blue.zip"}
 
 ![](figures/intro/Sea4Blue_page-0001.jpg){fig-align="center" width="86%"}
 
@@ -745,17 +743,15 @@ plot_ordination(phyloseq_obj_css, otu.ord, color = "Zone", axes = c(1, 2)) +
 
 ![](figures/biostatistica/06-pcoa-bray.png){fig-align="center" width="90%"}
 
-::: {.callout-question title="Interpretation question"}
-Looking at alpha and beta diversity together, which samples seem most different from the others along the transect?
-:::
+::: {.callout-question title="Checkpoint 1 — reading the PCoA"}
+Look at **distances** before zone names: which two or three points are closest? Which point or small group is furthest away? Then check the colours: do close samples mostly belong to one zone, or do colours mix?
 
-::: {.callout-question title="Interpretation question"}
-Looking at alpha and beta diversity together, which samples seem most different from the others along the transect? Does the pattern look more driven by geographic zone or by one specific sample?
+Write one descriptive sentence: “In this plot, ___ is more similar to ___ than to ___.” Do not yet claim that an environmental variable *causes* the pattern.
 :::
 
 ## Community composition and RDA
 
-First we look at the taxonomic composition at genus level, then we close with an RDA constrained by longitude and richness.
+First we look at taxonomic composition at genus level, then use RDA to summarize the association between composition and transect variables.
 
 ```r
 # Use one helper function to prepare composition data
@@ -774,8 +770,10 @@ ggplot(data = data_glom, aes(x = Sample, y = Abundance, fill = Genus)) +
 
 ![](figures/biostatistica/08-composition-all.png){fig-align="center" width="95%"}
 
-::: {.callout-question title="What do you notice?"}
-Which taxonomic groups dominate, and which ones change most between zones?
+::: {.callout-question title="Checkpoint 2 — reading the bar plot"}
+Choose **one genus that you can identify in the legend**. In which zone does it appear most abundant? Is its colour similar in every sample in that zone, or does it vary strongly among samples?
+
+Remember: each bar totals 100%. The plot shows **relative abundance**, not the absolute number of cells.
 :::
 
 ```r
@@ -827,8 +825,10 @@ p2 +
 
 ![](figures/biostatistica/09-rda.png){fig-align="center" width="90%"}
 
-::: {.callout-question title="What do you notice?"}
-Do the RDA arrows suggest a stronger link with longitude or with richness?
+::: {.callout-question title="Checkpoint 3 — connecting RDA and the transect"}
+Follow the **Longitude** arrow: which samples lie broadly in its direction, and which lie in the opposite direction? Is that arrangement consistent with the gradient seen in the PCoA?
+
+Arrows show associations in the RDA configuration; they do not prove that longitude or richness biologically causes community change.
 :::
 
 

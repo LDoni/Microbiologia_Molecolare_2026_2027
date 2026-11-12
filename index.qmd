@@ -65,6 +65,11 @@ Host range fago-*Klebsiella* e caso CRISPR-Cas PA14/DMS3, mantenuti come sistemi
 
 ## Risorse e preparazione
 
+Tutti i laboratori usano cinque missioni e 100 punti di autovalutazione;
+nickname, tentativi e rapporto restano nel browser. Per LAB01 il docente deve
+preparare le reads autentiche della demo AmpWrap e verificare FastQC/MultiQC;
+il replay LAB03 va attivato solo nel laboratorio dedicato.
+
 Le pagine di [Bash](bash.qmd), [AmpWrap](ampwrap.qmd), [Introduzione a R](intro-r.qmd) e [Biostatistica](biostatistica.qmd) restano disponibili come materiale di riferimento. L'ambiente software deve essere installato e verificato **prima del corso**; seguire le [istruzioni complete nel repository](https://github.com/LDoni/Microbiologia_Molecolare_2026_2027#readme).
 
 ```bash
@@ -81,7 +86,7 @@ Non avviare il download e la creazione dell'ambiente la mattina del corso: richi
 ::: {.download-box}
 Scaricare e decomprimere il dataset **prima di aprire RStudio**.
 
-[Scarica Sea4Blue.zip](downloads/Sea4Blue.zip){.btn .btn-primary download="Sea4Blue.zip"}
+[Scarica Sea4Blue.zip](downloads/Sea4Blue-student.zip){.btn .btn-primary download="Sea4Blue.zip"}
 :::
 
 ## Come usare questo sito
@@ -150,6 +155,11 @@ Phage–*Klebsiella* host range and a separate PA14/DMS3 CRISPR-Cas case.
 
 ## Resources and setup
 
+All laboratories use five missions and 100 formative points; nickname,
+attempts and the report stay in the browser. For LAB01 the instructor must
+prepare authentic AmpWrap demonstration reads and check FastQC/MultiQC.
+Activate the LAB03 replay only for its dedicated laboratory.
+
 The [Bash](bash.qmd), [AmpWrap](ampwrap.qmd), [Introduction to R](intro-r.qmd), and [Biostatistics](biostatistica.qmd) pages remain available as reference resources. Install and check the software environment **before the course**; follow the [full repository instructions](https://github.com/LDoni/Microbiologia_Molecolare_2026_2027#readme).
 
 ```bash
@@ -166,7 +176,7 @@ Do not start downloading and building the environment on the morning of the cour
 ::: {.download-box}
 Download and unzip the dataset **before opening RStudio**.
 
-[Download Sea4Blue.zip](downloads/Sea4Blue.zip){.btn .btn-primary download="Sea4Blue.zip"}
+[Download Sea4Blue.zip](downloads/Sea4Blue-student.zip){.btn .btn-primary download="Sea4Blue.zip"}
 :::
 
 ## How to use this site

@@ -16,6 +16,16 @@ Alla fine della giornata sarete in grado di:
 
 ## Struttura delle 8 ore
 
+### Laboratori pratici aggiuntivi
+
+Quattro sessioni autonome da 150 minuti: [LAB01](lab-01-fastq-asv.qmd) reads→ASV,
+[LAB02](lab-02-atlantic-microbiome.qmd) comunità atlantiche,
+[LAB03](lab-03-interactive-investigation.qmd) indagine genomica e
+[LAB04](lab-04-virtual-experiment.qmd) interazioni fago–ospite.
+Ogni sessione ha cinque missioni, 100 punti formativi al primo tentativo e un
+rapporto JSON locale. Le dieci ore pratiche sono aggiuntive al programma di otto
+ore sotto riportato. Preparare le reads demo AmpWrap prima di LAB01.
+
 | Modulo | Durata | Contenuti |
 |---|---:|---|
 | Teoria del metabarcoding | 2 h | Disegno sperimentale, marker, primer, controlli, reads, errori, ASV/OTU e tassonomia |
@@ -36,7 +46,7 @@ Lo scopo non e produrre una figura finale il piu rapidamente possibile, ma capir
 
 1. Completare l'[installazione](https://github.com/LDoni/Microbiologia_Molecolare_2026_2027#readme).
 2. Verificare che RStudio si apra dall'ambiente del corso.
-3. Scaricare [Sea4Blue.zip](downloads/Sea4Blue.zip) senza decomprimerlo due volte.
+3. Scaricare [Sea4Blue.zip](downloads/Sea4Blue-student.zip) senza decomprimerlo due volte.
 4. Portare un computer con almeno 8 GB di RAM e spazio libero sufficiente.
 :::
 
@@ -53,6 +63,16 @@ By the end of the day you should be able to:
 - interpret alpha and beta diversity, PERMANOVA, and constrained ordinations.
 
 ## The 8-hour structure
+
+### Additional practical laboratories
+
+Four standalone 150-minute sessions: [LAB01](lab-01-fastq-asv.qmd) reads→ASVs,
+[LAB02](lab-02-atlantic-microbiome.qmd) Atlantic communities,
+[LAB03](lab-03-interactive-investigation.qmd) genomic investigation and
+[LAB04](lab-04-virtual-experiment.qmd) phage–host interactions.
+Each session has five missions, 100 first-attempt formative points and a local
+JSON report. These ten practical hours are additional to the eight-hour course
+below. Prepare the AmpWrap demonstration reads before LAB01.
 
 | Module | Duration | Content |
 |---|---:|---|
@@ -74,6 +94,6 @@ The goal is not to produce a final figure as fast as possible, but to understand
 
 1. Complete the [installation](https://github.com/LDoni/Microbiologia_Molecolare_2026_2027#readme).
 2. Make sure RStudio opens from the course environment.
-3. Download [Sea4Blue.zip](downloads/Sea4Blue.zip) without unzipping it twice.
+3. Download [Sea4Blue.zip](downloads/Sea4Blue-student.zip) without unzipping it twice.
 4. Bring a computer with at least 8 GB of RAM and enough free disk space.
 :::

@@ -1,78 +1,32 @@
 ---
-title: "LAB 04 — The Phage Challenge"
-toc: true
+title: "LAB 04"
+toc: false
+title-block-style: none
 ---
 
-::: {.lang-block .lang-it}
-::: {.hero}
-# LAB 04 — La sfida dei fagi
+# LAB 04 — <span class="lang-it">La sfida dei fagi</span><span class="lang-en">The Phage Challenge</span>
 
-**150 minuti · Host range, genomi fagici e CRISPR-Cas**
+<p><span class="lang-it">150 minuti · 100 punti formativi. Apri le missioni in ordine. Clicca le figure per ingrandirle.</span><span class="lang-en">150 minutes · 100 formative points. Open missions in order. Click figures to enlarge.</span></p>
 
-Come scegliamo candidati fagici e perché un batterio può resistere all'infezione?
-:::
-::: {.evidence-card}
-<span class="evidence-label">DUE SISTEMI INDIPENDENTI</span> Caso A: interazioni fago-*Klebsiella* dal dataset PhageHostLearn. Caso B: *Pseudomonas aeruginosa* PA14 e fago DMS3 per la difesa CRISPR-Cas. Non combinare le osservazioni dei due sistemi.
-:::
-::: {.lab-progress}
-**Avanzamento:** <span data-lab-progress-label>0/4</span><progress data-lab-progress value="0" max="100">0%</progress>
-:::
-::: {.mission-card data-lab-step="matrix"}
-## Missione 1 — Leggi la matrice host range <span class="mission-meta">20 min</span>
-<span class="evidence-label">DATI REALI — LICENZA E SOTTOINSIEME DA VALIDARE</span> Distingui test positivi, negativi e combinazioni non testate. Un'osservazione mancante è sconosciuta, non negativa.
-<button class="btn btn-outline-primary btn-sm" data-complete-step type="button">Segna missione completata</button>
-:::
-::: {.mission-card data-lab-step="r"}
-## Missione 2 — Analizza in R <span class="mission-meta">35 min</span>
-<span class="evidence-label simulated">MODELLO DI ESERCIZIO — NESSUN DATASET INCLUSO</span> Quando il CSV verificato sarà disponibile, importa `phage_id`, `host_id`, `result` e disegna una heatmap. Il template [R](design/LAB04_R_TEMPLATE.R) impedisce di trattare i non-testati come negativi.
-<button class="btn btn-outline-primary btn-sm" data-complete-step type="button">Segna missione completata</button>
-:::
-::: {.mission-card data-lab-step="genome"}
-## Missione 3 — Cosa dice un genoma fagico? <span class="mission-meta">35 min</span>
-<span class="evidence-label">DATI REALI — ACCESSIONI/ANNOTAZIONI DA VALIDARE</span> Una mappa locale o un visualizzatore mostrerà solo annotazioni verificabili. Il contenuto genico può suggerire una funzione, ma non dimostra host range, ciclo litico o idoneità clinica.
-<button class="btn btn-outline-primary btn-sm" data-complete-step type="button">Segna missione completata</button>
-:::
-::: {.mission-card data-lab-step="crispr"}
-## Missione 4 — Difesa CRISPR-Cas <span class="mission-meta">60 min</span>
-<span class="evidence-label">DATI REALI — CASO PA14/DMS3 SEPARATO</span> Esplora i riferimenti PA14 e DMS3 e confronta i risultati pubblicati per DMS3 e DMS3vir. Una corrispondenza di spacer non dimostra da sola immunità funzionale.
-<label for="lab04-notes">Note di laboratorio — scelta, evidenze e domanda aperta</label><textarea id="lab04-notes" class="lab-notes" data-lab-notes="conclusion" placeholder="Salvato solo nel browser di questo dispositivo."></textarea>
-<div class="lab-actions"><button class="btn btn-outline-primary btn-sm" data-complete-step type="button">Segna missione completata</button><button class="btn btn-outline-secondary btn-sm" data-reset-lab type="button">Ricomincia</button></div>
-:::
-:::
+<div data-investigation="04"></div>
 
-::: {.lang-block .lang-en}
-::: {.hero}
-# LAB 04 — The Phage Challenge
+<template data-evidence="0"><p><span class="lang-it">Obiettivo: distinguere test positivo, negativo e non effettuato. Ispeziona righe, colonne e legenda della matrice.</span><span class="lang-en">Objective: distinguish positive, negative and untested observations. Inspect matrix rows, columns and legend.</span></p><a download href="data-curation/lab04/lab04_host_range_verified.csv">CSV: host–phage panel</a></template>
 
-**150 minutes · Host range, phage genomes, and CRISPR-Cas**
+<template data-evidence="1"><p><span class="lang-it">In RStudio, imposta la root del progetto come working directory. Esegui il codice e interpreta i conteggi; i missing non sono zeri.</span><span class="lang-en">In RStudio set the project root as working directory. Run the code and interpret counts; missing values are not zeros.</span></p><pre><code>x &lt;- read.csv("data-curation/lab04/lab04_host_range_verified.csv", check.names=FALSE)
+m &lt;- as.matrix(x[-1])
+sum(m == 1, na.rm=TRUE)
+sum(m == 0, na.rm=TRUE)
+sum(is.na(m))
+heatmap(m, Rowv=NA, Colv=NA, scale="none", labRow=x$host_id)
+</code></pre><a target="_blank" href="figures/lab04/lab04_interaction_heatmap.svg"><img src="figures/lab04/lab04_interaction_heatmap.svg" alt="Observed host–phage interactions / Interazioni osservate"></a></template>
 
-How do we select phage candidates, and why might a bacterium resist infection?
-:::
-::: {.evidence-card}
-<span class="evidence-label">TWO INDEPENDENT SYSTEMS</span> Case A: phage–*Klebsiella* interactions from PhageHostLearn. Case B: *Pseudomonas aeruginosa* PA14 and phage DMS3 for CRISPR-Cas defense. Do not combine evidence from the systems.
-:::
-::: {.lab-progress}
-**Progress:** <span data-lab-progress-label>0/4</span><progress data-lab-progress value="0" max="100">0%</progress>
-:::
-::: {.mission-card data-lab-step="matrix"}
-## Mission 1 — Read the host-range matrix <span class="mission-meta">20 min</span>
-<span class="evidence-label">REAL DATA — LICENSE AND SUBSET PENDING VALIDATION</span>Distinguish positive tests, negative tests, and untested pairs. A missing observation is unknown, not negative.
-<button class="btn btn-outline-primary btn-sm" data-complete-step type="button">Mark mission complete</button>
-:::
-::: {.mission-card data-lab-step="r"}
-## Mission 2 — Analyse in R <span class="mission-meta">35 min</span>
-<span class="evidence-label simulated">EXERCISE MODEL — NO DATASET INCLUDED</span>When a verified CSV is available, import `phage_id`, `host_id`, and `result` to create a heatmap. The [R template](design/LAB04_R_TEMPLATE.R) avoids turning untested pairs into negatives.
-<button class="btn btn-outline-primary btn-sm" data-complete-step type="button">Mark mission complete</button>
-:::
-::: {.mission-card data-lab-step="genome"}
-## Mission 3 — What can a phage genome say? <span class="mission-meta">35 min</span>
-<span class="evidence-label">REAL DATA — ACCESSIONS/ANNOTATIONS PENDING VALIDATION</span>A local map or viewer will contain only verifiable annotations. Gene content can suggest function, but does not demonstrate host range, lytic lifestyle, or clinical suitability.
-<button class="btn btn-outline-primary btn-sm" data-complete-step type="button">Mark mission complete</button>
-:::
-::: {.mission-card data-lab-step="crispr"}
-## Mission 4 — CRISPR-Cas defense <span class="mission-meta">60 min</span>
-<span class="evidence-label">REAL DATA — SEPARATE PA14/DMS3 CASE</span>Explore PA14 and DMS3 references and compare reported outcomes for DMS3 and DMS3vir. A spacer match alone does not demonstrate functional immunity.
-<label for="lab04-notes-en">Laboratory notes — selection, evidence, open question</label><textarea id="lab04-notes-en" class="lab-notes" data-lab-notes="conclusion" placeholder="Saved only in this browser on this device."></textarea>
-<div class="lab-actions"><button class="btn btn-outline-primary btn-sm" data-complete-step type="button">Mark mission complete</button><button class="btn btn-outline-secondary btn-sm" data-reset-lab type="button">Start over</button></div>
-:::
-:::
+<template data-evidence="2"><p><span class="lang-it">Confronta la copertura delle coppie e i match genomici verificati. Non associare sequenze a ID simili senza conferma.</span><span class="lang-en">Compare pair coverage and verified genome matches. Do not assign sequences to similar IDs without confirmation.</span></p><a href="data-curation/lab04/derived/two_phage_coverage.csv">Pair coverage CSV</a> · <a href="data-curation/lab04/derived/phage_genome_inventory.csv">Genome inventory CSV</a></template>
+
+<template data-evidence="3"><p><span class="lang-it">PA14/DMS3 è un sistema distinto da Klebsiella. Leggi lo studio primario e identifica spacer, protospacer, PAM e seed. Distingui DMS3 e DMS3vir.</span><span class="lang-en">PA14/DMS3 is separate from Klebsiella. Read the primary study and identify spacer, protospacer, PAM and seed. Distinguish DMS3 and DMS3vir.</span></p><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3486085/">Cady et al. 2012 — primary study and published figures</a> · <a href="https://www.ncbi.nlm.nih.gov/nuccore/NC_008463.1">PA14</a> · <a href="https://www.ncbi.nlm.nih.gov/nuccore/NC_008717.1">DMS3</a></template>
+
+<template data-evidence="4"><p><span class="lang-it">Proponi una coppia motivata dai test, esplicita gli isolati non coperti e due verifiche successive. Il risultato in vitro non dimostra efficacia clinica.</span><span class="lang-en">Propose a pair supported by the assays, identify uncovered hosts and two follow-up checks. In vitro results do not establish clinical efficacy.</span></p></template>
+
+<details><summary><span class="lang-it">Metodi e provenienza</span><span class="lang-en">Methods and provenance</span></summary><p><span class="lang-it">Matrice PhageHostLearn, Zenodo 11061100 v2, CC BY 4.0. Il subset verificato è completo; nella fonte estesa le celle vuote sono non testate. Le funzioni genomiche non sono state inferite da nomi simili.</span><span class="lang-en">PhageHostLearn matrix, Zenodo 11061100 v2, CC BY 4.0. The verified subset is complete; blanks in the larger source are untested. Genome functions were not inferred from similar names.</span></p></details>
+
+<script src="lab-investigation.js"></script>
+

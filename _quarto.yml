@@ -13,7 +13,18 @@ project:
     - intro-r.qmd
     - biostatistica.qmd
   resources:
-    - downloads/Sea4Blue.zip
+    - downloads/Sea4Blue-student.zip
+    - lab-investigation.js
+    - lab-community-config.js
+    - data-curation/lab02/*.csv
+    - figures/lab02/*.svg
+    - scripts/lab02/analyze_lab02.R
+    - downloads/lab03/case_*.csv
+    - downloads/lab03/case_*.nwk
+    - data-curation/lab04/lab04_host_range_verified.csv
+    - data-curation/lab04/derived/*.csv
+    - figures/lab03/case/*.svg
+    - figures/lab04/*.svg
 
 website:
   title: "Molecular Microbiology 2026/2027"
